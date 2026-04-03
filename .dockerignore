@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.git/
+docs/
+maid-resource/
+content/
+coverage/
+test-results/
+playwright-report/
+.env
+.env.local
+.env.*.local
+*.md
+!README.md

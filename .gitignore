@@ -1,0 +1,50 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# build
+dist/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# debug
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# test
+coverage/
+test-results/
+playwright-report/
+
+# prisma
+prisma/*.db
+
+# reference resources (screenshots, source HTML)
+maid-resource/
+
+# claude code plugin content
+content/
+
+# claude code local config
+.claude/session-logs/
+.claude/settings.local.json
+.claude/*.local.md
+.claude/.DS_Store
+
+# auto-generated
+next-env.d.ts

@@ -1,0 +1,49 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum ApplicationStatus {
+  PENDING
+  CONTACTED
+  PROCESSING
+  COMPLETED
+  CANCELLED
+}
+
+model Application {
+  id                    String            @id @default(cuid())
+  name                  String
+  title                 String
+  customTitle           String?
+  childrenCount         Int
+  childAge              Int
+  childBirthdays        String[]
+  familyStatus          String[]
+  address               String
+  nationalityPreference String[]
+  customNationality     String?
+  phone                 String
+  email                 String
+  company               String
+  jobTitle              String
+  contactTime           String[]
+  customContactTime     String?
+  status                ApplicationStatus @default(PENDING)
+  createdAt             DateTime          @default(now())
+  updatedAt             DateTime          @updatedAt
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

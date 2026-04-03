@@ -1,0 +1,66 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  CONTAINER_NAME: maid-app
+  IMAGE_NAME: maid-app
+  CONTAINER_PORT: "3000"
+
+# --- Staging ---
+
+build:staging:
+  stage: build
+  tags:
+    - frontend-docker-staging
+  script:
+    - docker build -t ${IMAGE_NAME}:staging .
+  only:
+    - develop
+
+deploy:staging:
+  stage: deploy
+  tags:
+    - frontend-docker-staging
+  script:
+    - docker stop ${CONTAINER_NAME} || true
+    - docker rm ${CONTAINER_NAME} || true
+    - >
+      docker run -d
+      --name ${CONTAINER_NAME}
+      --restart unless-stopped
+      -p ${CONTAINER_PORT}:3000
+      -e DATABASE_URL=${STAGING_DATABASE_URL}
+      -e JWT_SECRET=${STAGING_JWT_SECRET}
+      ${IMAGE_NAME}:staging
+  only:
+    - develop
+
+# --- Production ---
+
+build:production:
+  stage: build
+  tags:
+    - frontend-docker-production
+  script:
+    - docker build -t ${IMAGE_NAME}:production .
+  only:
+    - main
+
+deploy:production:
+  stage: deploy
+  tags:
+    - frontend-docker-production
+  script:
+    - docker stop ${CONTAINER_NAME} || true
+    - docker rm ${CONTAINER_NAME} || true
+    - >
+      docker run -d
+      --name ${CONTAINER_NAME}
+      --restart unless-stopped
+      -p ${CONTAINER_PORT}:3000
+      -e DATABASE_URL=${PRODUCTION_DATABASE_URL}
+      -e JWT_SECRET=${PRODUCTION_JWT_SECRET}
+      ${IMAGE_NAME}:production
+  only:
+    - main
