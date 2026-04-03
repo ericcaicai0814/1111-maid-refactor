@@ -1,3 +1,6 @@
+/** 「其他」選項的值 — schema 與 fields 共用 */
+export const OTHER_OPTION_VALUE = '其他' as const;
+
 /** 表單欄位定義 */
 export interface FormField {
   name: string;
@@ -21,7 +24,7 @@ export type CheckboxOption = SelectOption;
 export const titleOptions: RadioOption[] = [
   { value: '父', label: '父' },
   { value: '母', label: '母' },
-  { value: '其他', label: '其他', hasCustomInput: true },
+  { value: OTHER_OPTION_VALUE, label: OTHER_OPTION_VALUE, hasCustomInput: true },
 ];
 
 /** 家庭狀況 checkbox 選項 */
@@ -54,7 +57,7 @@ export const nationalityOptions: CheckboxOption[] = [
   { value: '菲律賓', label: '菲律賓' },
   { value: '印尼', label: '印尼' },
   { value: '不指定', label: '不指定' },
-  { value: '其他', label: '其他', hasCustomInput: true },
+  { value: OTHER_OPTION_VALUE, label: OTHER_OPTION_VALUE, hasCustomInput: true },
 ];
 
 /** 聯絡時段 checkbox 選項 */
@@ -62,7 +65,7 @@ export const contactTimeOptions: CheckboxOption[] = [
   { value: 'morning', label: '平日上午(09:00-12:00)' },
   { value: 'noon', label: '平日中午(12:00-13:30)' },
   { value: 'evening', label: '平日晚上(19:00-22:00)' },
-  { value: '其他', label: '其他', hasCustomInput: true },
+  { value: OTHER_OPTION_VALUE, label: OTHER_OPTION_VALUE, hasCustomInput: true },
 ];
 
 /** 完整表單欄位定義 */

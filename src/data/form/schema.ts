@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { OTHER_OPTION_VALUE } from './fields';
 
 /** 申請表單 Zod Schema */
 export const ApplicationFormSchema = z
@@ -85,9 +86,9 @@ export const ApplicationFormSchema = z
       }
     };
 
-    requireCustom(data.title === '其他', data.customTitle, 'customTitle', '請輸入稱謂');
-    requireCustom(data.nationalityPreference.includes('其他'), data.customNationality, 'customNationality', '請輸入國籍');
-    requireCustom(data.contactTime.includes('其他'), data.customContactTime, 'customContactTime', '請輸入聯絡時段');
+    requireCustom(data.title === OTHER_OPTION_VALUE, data.customTitle, 'customTitle', '請輸入稱謂');
+    requireCustom(data.nationalityPreference.includes(OTHER_OPTION_VALUE), data.customNationality, 'customNationality', '請輸入國籍');
+    requireCustom(data.contactTime.includes(OTHER_OPTION_VALUE), data.customContactTime, 'customContactTime', '請輸入聯絡時段');
 
     /** childrenCount 與 childBirthdays.length 交叉驗證 */
     if (data.childBirthdays.length !== data.childrenCount) {
