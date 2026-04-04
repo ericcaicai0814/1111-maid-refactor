@@ -10,8 +10,8 @@ export function HeroSection() {
   return (
     <section className="bg-brand-dark text-white">
       <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
-          <div className="flex-1 text-center md:text-left">
+        <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-12">
+          <div className="text-center md:text-left">
             <p className="mb-2 text-sm font-semibold tracking-widest text-brand-light opacity-80">
               {eyebrow}
             </p>
@@ -23,7 +23,7 @@ export function HeroSection() {
               <span className="font-bold text-brand-accent">{highlight}</span>
               {descriptionParts[1]}
             </p>
-            <div className="flex flex-col items-center gap-3 sm:flex-row md:items-start">
+            <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap md:items-start">
               <Link
                 href={primaryCTA.href}
                 className="rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-brand-dark"
@@ -39,7 +39,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="flex-1">
+          <div>
             <Image
               src={image.src}
               alt={image.alt}
