@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const sweiGothic = localFont({
   src: [
@@ -23,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-Hant-TW" className={sweiGothic.variable}>
+    <html lang="zh-Hant-TW" className={cn("font-sans", geist.variable)}>
       <body className="font-[family-name:var(--font-swei-gothic)]">{children}</body>
     </html>
   );
