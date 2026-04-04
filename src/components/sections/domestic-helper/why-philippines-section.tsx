@@ -14,29 +14,27 @@ export function WhyPhilippinesSection() {
           <p className="mt-3 text-text-mid">{subtitle}</p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md sm:flex-row"
+              className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-md"
             >
-              <div className="shrink-0">
+              <div className="mb-4">
                 <Image
                   src={feature.image}
                   alt={feature.title}
                   width={200}
                   height={200}
-                  className="h-48 w-full object-cover sm:h-full sm:w-40"
+                  className="mx-auto size-40 rounded-full object-cover"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="mb-2 text-lg font-bold text-brand-dark">
-                  {feature.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-text-mid">
-                  {feature.description}
-                </p>
-              </div>
+              <h3 className="mb-2 font-bold text-brand-dark">
+                {feature.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-text-mid">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

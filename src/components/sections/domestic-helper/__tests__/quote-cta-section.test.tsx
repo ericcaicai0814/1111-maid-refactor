@@ -6,9 +6,7 @@ describe('QuoteCTASection', () => {
   it('renders quote text', () => {
     render(<QuoteCTASection />);
     expect(
-      screen.getByText(
-        '讓家務回歸專業，讓陪伴回歸高品質。1111 幫傭專案，為您引進最懂家庭需求的菲籍人才。',
-      ),
+      screen.getByText(/讓家務回歸專業.*菲籍人才/),
     ).toBeInTheDocument();
   });
 

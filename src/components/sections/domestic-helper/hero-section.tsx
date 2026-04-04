@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { heroData } from '@/data/domestic-helper';
+import { heroData, domesticHelperLogos } from '@/data/domestic-helper';
 
 export function HeroSection() {
   const { eyebrow, title, description, highlight, primaryCTA, secondaryCTA, image } = heroData;
@@ -12,6 +12,16 @@ export function HeroSection() {
       <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
         <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-12">
           <div className="text-center md:text-left">
+            <div className="mb-4 flex items-center gap-3 max-md:justify-center">
+              <Image
+                src={domesticHelperLogos.secondary.src}
+                alt={domesticHelperLogos.secondary.alt}
+                width={48}
+                height={48}
+                className="h-12 w-auto"
+              />
+              <span className="text-2xl font-bold md:text-3xl">幫傭專案</span>
+            </div>
             <p className="mb-2 text-sm font-semibold tracking-widest text-brand-light opacity-80">
               {eyebrow}
             </p>
