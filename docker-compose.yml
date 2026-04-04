@@ -1,0 +1,50 @@
+services:
+  claude-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.claude-agent
+    container_name: claude-agent
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      # Project source
+      - .:/workspace
+      # Preserve node_modules inside container
+      - node_modules:/workspace/node_modules
+      # Claude Max subscription auth (OAuth token)
+      - ${HOME}/.claude:/root/.claude
+    environment:
+      - DATABASE_URL=postgresql://maid:maid_dev_pw@postgres:5432/maid_development
+      - JWT_SECRET=docker-dev-jwt-secret
+      # Skip Prisma postinstall in container (run manually via entrypoint)
+      - PRISMA_SKIP_POSTINSTALL_GENERATE=true
+      # Playwright browsers pre-installed in base image
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+
+  postgres:
+    image: postgres:17-alpine
+    container_name: claude-agent-db
+    environment:
+      - POSTGRES_USER=maid
+      - POSTGRES_PASSWORD=maid_dev_pw
+      - POSTGRES_DB=maid_development
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U maid -d maid_development"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  node_modules:
+  pgdata:
