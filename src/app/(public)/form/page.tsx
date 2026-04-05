@@ -1,8 +1,9 @@
+import { ApplicationForm } from '@/components/sections/form';
+
 export default function FormPage() {
   return (
-    <main>
-      <h1>報名表單</h1>
-      <p>外籍幫傭申請表單</p>
+    <main className="container mx-auto max-w-4xl px-4 py-8">
+      <ApplicationForm />
     </main>
   );
 }
