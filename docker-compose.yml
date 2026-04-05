@@ -12,8 +12,9 @@ services:
       - .:/workspace
       # Preserve node_modules inside container
       - node_modules:/workspace/node_modules
-      # Claude Max subscription auth (OAuth token)
-      - ${HOME}/.claude:/root/.claude
+      # Claude config directory (plugins, settings — NOT auth tokens)
+      # Do NOT mount .claude.json — it's a live file, host writes cause invalid JSON in container
+      - ${HOME}/.claude:/home/claude/.claude
     environment:
       - DATABASE_URL=postgresql://maid:maid_dev_pw@postgres:5432/maid_development
       - JWT_SECRET=docker-dev-jwt-secret
