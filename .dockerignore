@@ -1,14 +1,39 @@
 node_modules/
 .next/
 .git/
+.worktrees/
+
+# Documentation & reference
 docs/
 maid-resource/
 content/
+
+# Test artifacts
 coverage/
 test-results/
 playwright-report/
+
+# Environment secrets
 .env
 .env.local
 .env.*.local
-*.md
-!README.md
+
+# Claude Code local config (auth mounted separately)
+.claude/
+
+# Screenshots & design references
+*.png
+*.jpg
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Auto-generated dev files
+.auto-dev/
+.playwright-mcp/

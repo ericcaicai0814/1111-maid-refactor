@@ -1,0 +1,24 @@
+# --- Claude Code Agent Environment ---
+FROM mcr.microsoft.com/playwright:v1.52.0-noble
+
+# Build tools for native addons + gosu for user switching
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    python3 \
+    gosu \
+    && rm -rf /var/lib/apt/lists/*
+
+# Claude Code CLI (global)
+RUN npm install -g @anthropic-ai/claude-code
+
+# Non-root user (required: --dangerously-skip-permissions blocks root)
+RUN useradd -m -s /bin/bash claude
+
+WORKDIR /workspace
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Entrypoint runs as root, drops to claude user via gosu
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["bash"]
