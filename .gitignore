@@ -34,8 +34,9 @@ playwright-report/
 # prisma
 prisma/*.db
 
-# reference resources (screenshots, source HTML)
+# reference resources (screenshots, source HTML, design mockups)
 maid-resource/
+/*.png
 
 # claude code plugin content
 content/
