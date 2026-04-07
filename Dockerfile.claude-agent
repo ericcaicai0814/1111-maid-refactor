@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     python3 \
     gosu \
+    jq \
     && rm -rf /var/lib/apt/lists/*
 
 # Claude Code CLI (global)
