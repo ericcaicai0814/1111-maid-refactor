@@ -8,6 +8,21 @@ if [ -d "/workspace/node_modules" ]; then
   chown -R claude:claude /workspace/node_modules
 fi
 
+# --- Phase 1.5: Root — create symlinks for host path resolution ---
+# Hooks use $HOME/dotfiles/... but symlinks and settings use /Users/ericcai/...
+# Bridge the gap: $HOME → /Users/ericcai mount points
+mkdir -p /home/claude/dotfiles /home/claude/.config
+ln -sfn /Users/ericcai/dotfiles/claude /home/claude/dotfiles/claude
+ln -sfn /Users/ericcai/.config/ccusage-tracker /home/claude/.config/ccusage-tracker
+
+# Project-specific memory: host path key → container workspace path key
+# Host 用 -Users-ericcai-project-1111-maid-refactor，容器內 Claude 會找 -workspace
+PROJ_HOST="/home/claude/.claude/projects/-Users-ericcai-project-1111-maid-refactor"
+PROJ_CONTAINER="/home/claude/.claude/projects/-workspace"
+if [ -d "$PROJ_HOST" ] && [ ! -e "$PROJ_CONTAINER" ]; then
+  ln -sfn "$PROJ_HOST" "$PROJ_CONTAINER"
+fi
+
 # --- Phase 2: Drop to non-root user via gosu ---
 exec gosu claude bash -c '
 set -e

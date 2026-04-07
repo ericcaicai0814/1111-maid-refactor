@@ -12,9 +12,14 @@ services:
       - .:/workspace
       # Preserve node_modules inside container
       - node_modules:/workspace/node_modules
-      # Claude config directory (plugins, settings — NOT auth tokens)
+      # Claude config directory (plugins, settings, memory, skills — NOT auth tokens)
       # Do NOT mount .claude.json — it's a live file, host writes cause invalid JSON in container
       - ${HOME}/.claude:/home/claude/.claude
+      # Resolve symlinks: ~/.claude/* → /Users/ericcai/dotfiles/claude/*
+      # ~/.claude/ 內有 18 個 symlink 指向此絕對路徑，需原路掛載才能解析
+      - ${HOME}/dotfiles/claude:/Users/ericcai/dotfiles/claude:ro
+      # ccusage-tracker (SessionEnd hook 使用絕對路徑引用)
+      - ${HOME}/.config/ccusage-tracker:/Users/ericcai/.config/ccusage-tracker
     environment:
       - DATABASE_URL=postgresql://maid:maid_dev_pw@postgres:5432/maid_development
       - JWT_SECRET=docker-dev-jwt-secret
