@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { miniFAQItems } from '@/data/faq';
+import { publicPaths } from '@/lib/paths';
 import { ChevronDown } from 'lucide-react';
 
 export function MiniFAQ() {
@@ -51,7 +52,7 @@ export function MiniFAQ() {
 
         <div className="mt-8 text-center">
           <Link
-            href="/faq"
+            href={publicPaths.faq}
             className="text-brand underline-offset-4 hover:underline"
           >
             找不到問題嗎？查看更多常見問題

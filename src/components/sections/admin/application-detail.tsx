@@ -96,7 +96,7 @@ export function ApplicationDetail({ application }: ApplicationDetailProps) {
         <CardContent>
           <Select
             defaultValue={application.status}
-            onValueChange={(value: string) => {
+            onValueChange={(value) => {
               // TODO: Server Action to update status
               console.log('update status', value);
             }}

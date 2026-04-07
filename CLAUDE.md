@@ -19,11 +19,11 @@ npm run prisma:migrate    # 執行 migration（開發）
 npm run prisma:studio     # 開啟 DB GUI
 ```
 
-## basePath 注意事項
+## 公開頁面路徑
 
-- `next.config.ts` 設定 `basePath: '/foreign-domestic-helper-under-12'`
-- `<Link>` 和 `<Image>` 會自動處理 basePath，不需手動加前綴
-- `fetch('/api/...')` 和 `window.location` 不會自動處理，需用完整路徑
+- 公開頁面放在 `src/app/foreign-domestic-helper-under-12/` 目錄下，URL 自動對應
+- 路徑常數集中管理於 `src/lib/paths.ts`（`publicPaths.home`、`.form`、`.faq`、`.domesticHelper`）
+- 新增公開頁面的 Link 時，一律引用 `publicPaths` 常數，不要硬編碼路徑
 
 ## 目錄結構
 
@@ -40,7 +40,7 @@ prisma/            # Prisma schema + migrations
 
 ## 技術棧
 
-Next.js 15 (App Router) · TypeScript strict · Tailwind CSS v4 · shadcn/ui · Prisma · PostgreSQL
+Next.js 16 (App Router) · TypeScript strict · Tailwind CSS v4 · shadcn/ui · Prisma · PostgreSQL
 
 ## Commit 慣例
 

@@ -1,4 +1,5 @@
 import type { CTAButton, ResponsiveImage } from './types';
+import { publicPaths } from '@/lib/paths';
 
 /** 特色項目（Alliance 與 WhyPhilippines 共用） */
 export interface FeatureItem {
@@ -67,12 +68,12 @@ export const heroData: HeroData = {
   highlight: '只要1名12歲以下子女',
   primaryCTA: {
     label: '查看申請資格',
-    href: '/',
+    href: publicPaths.home,
     variant: 'secondary',
   },
   secondaryCTA: {
     label: '立即報名',
-    href: '/form',
+    href: publicPaths.form,
     variant: 'primary',
   },
   image: {
@@ -148,7 +149,7 @@ export const quoteCTAData: QuoteCTAData = {
     '讓家務回歸專業，讓陪伴回歸高品質。1111 幫傭專案，為您引進最懂家庭需求的菲籍人才。',
   cta: {
     label: '點我立即報名',
-    href: '/form',
+    href: publicPaths.form,
     variant: 'primary',
   },
 };

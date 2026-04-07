@@ -14,7 +14,7 @@ export default async function AdminLayout({
   const token = cookieStore.get(AUTH_COOKIE_NAME)?.value;
 
   if (token && !verifyJWT(token)) {
-    redirect('/foreign-domestic-helper-under-12/admin/login');
+    redirect('/admin/login');
   }
 
   const pendingCount = await prisma.application.count({

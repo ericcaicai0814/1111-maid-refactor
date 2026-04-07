@@ -2,16 +2,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { publicPaths } from '@/lib/paths';
 
 /** 右側浮動「申請表單」按鈕 — 在表單頁自動隱藏 */
 export function FooterCTA() {
   const pathname = usePathname();
 
-  if (pathname === '/form') return null;
+  if (pathname === publicPaths.form) return null;
 
   return (
     <Link
-      href="/form"
+      href={publicPaths.form}
       className="fixed right-0 top-1/2 z-40 -translate-y-1/2 flex flex-col items-center gap-1 rounded-l-lg bg-brand-dark px-3 py-3 text-xs font-bold text-white shadow-lg transition-colors hover:bg-brand"
     >
       <svg

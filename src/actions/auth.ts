@@ -57,5 +57,5 @@ export async function loginAction(
 export async function logoutAction(): Promise<void> {
   const cookieStore = await cookies();
   cookieStore.delete(COOKIE_NAME);
-  redirect('/foreign-domestic-helper-under-12/admin/login');
+  redirect('/admin/login');
 }

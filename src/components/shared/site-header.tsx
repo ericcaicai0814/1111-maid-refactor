@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { navItems } from '@/data/navigation';
+import { publicPaths } from '@/lib/paths';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -10,10 +11,10 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 right-0 left-0 z-50 bg-brand text-white">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="shrink-0">
+        <Link href={publicPaths.home} className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/foreign-domestic-helper-under-12/images/logo.png"
+            src="/images/logo.png"
             alt="1111人力銀行"
             className="h-8 w-auto"
           />

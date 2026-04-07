@@ -21,7 +21,7 @@ export default function AdminLoginPage() {
     const result = await loginAction(formData);
 
     if (result.success) {
-      router.push('/foreign-domestic-helper-under-12/admin');
+      router.push('/admin');
     } else {
       setError(result.error ?? '登入失敗');
       setLoading(false);

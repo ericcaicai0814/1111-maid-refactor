@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const BASE_PATH = '/foreign-domestic-helper-under-12';
 const AUTH_COOKIE_NAME = 'admin-token';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Only protect /admin paths (excluding /admin/login)
-  const isAdminPath = pathname.startsWith(`${BASE_PATH}/admin`);
-  const isLoginPath = pathname.startsWith(`${BASE_PATH}/admin/login`);
+  const isAdminPath = pathname.startsWith('/admin');
+  const isLoginPath = pathname.startsWith('/admin/login');
 
   if (!isAdminPath || isLoginPath) {
     return NextResponse.next();
@@ -18,7 +17,7 @@ export function middleware(request: NextRequest) {
   const token = request.cookies.get(AUTH_COOKIE_NAME)?.value;
 
   if (!token) {
-    const loginUrl = new URL(`${BASE_PATH}/admin/login`, request.url);
+    const loginUrl = new URL('/admin/login', request.url);
     return NextResponse.redirect(loginUrl);
   }
 
