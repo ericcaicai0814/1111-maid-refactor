@@ -1,10 +1,12 @@
-import { SiteHeader, SiteFooter, FooterCTA, BackToTop } from '@/components/shared';
+import { SiteHeader, SiteFooter, ServiceInfoCard, FooterCTA, BackToTop } from '@/components/shared';
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <SiteHeader />
-      <main className="pt-14">{children}</main>
+      {/* mobile: logo row only (56px), desktop: logo + nav (56+52=108px) */}
+      <main className="pt-14 sm:pt-[108px]">{children}</main>
+      <ServiceInfoCard />
       <SiteFooter />
       <FooterCTA />
       <BackToTop />

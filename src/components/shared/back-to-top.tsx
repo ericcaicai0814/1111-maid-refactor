@@ -16,12 +16,13 @@ export function BackToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="fixed right-4 bottom-20 z-40 flex size-10 items-center justify-center rounded-full bg-brand text-white shadow-lg transition-opacity hover:bg-brand-dark"
+      className="fixed right-5 bottom-8 z-40 flex size-10 items-center justify-center rounded-md bg-brand text-white transition-opacity hover:bg-brand-dark"
+      style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 1px 5px 15px 0px' }}
       aria-label="回到頂端"
     >
       <svg
-        width="16"
-        height="16"
+        width="20"
+        height="20"
         viewBox="0 0 16 16"
         fill="none"
         stroke="currentColor"

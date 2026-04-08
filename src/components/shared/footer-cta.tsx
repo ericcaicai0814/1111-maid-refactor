@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { publicPaths } from '@/lib/paths';
 
-/** 右側浮動「申請表單」按鈕 — 在表單頁自動隱藏 */
+/** 右下浮動「申請表單」按鈕 — 在表單頁自動隱藏 */
 export function FooterCTA() {
   const pathname = usePathname();
 
@@ -13,7 +13,10 @@ export function FooterCTA() {
   return (
     <Link
       href={publicPaths.form}
-      className="fixed right-0 top-1/2 z-40 -translate-y-1/2 flex flex-col items-center gap-1 rounded-l-lg bg-brand-dark px-3 py-3 text-xs font-bold text-white shadow-lg transition-colors hover:bg-brand"
+      className="fixed right-5 bottom-[90px] z-40 flex flex-col items-center gap-1 rounded-2xl px-[15px] py-2 text-[15px] font-semibold text-white shadow-lg transition hover:opacity-90"
+      style={{
+        background: 'linear-gradient(135deg, rgb(131,124,207), rgb(61,55,142))',
+      }}
     >
       <svg
         width="20"
@@ -30,8 +33,7 @@ export function FooterCTA() {
         <line x1="16" y1="13" x2="8" y2="13" />
         <line x1="16" y1="17" x2="8" y2="17" />
       </svg>
-      <span>申請</span>
-      <span>表單</span>
+      申請表單
     </Link>
   );
 }

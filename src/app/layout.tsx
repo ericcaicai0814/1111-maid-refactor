@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-Hant-TW" className={cn("font-sans", geist.variable)}>
-      <body className="font-[family-name:var(--font-swei-gothic)]">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -12,12 +12,12 @@ export function ServiceInfoCard() {
       >
         {/* 服務時間 */}
         <div className="flex-1">
-          <h3 className="mb-2 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
+          <h3 className="mb-4 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
             服務時間
           </h3>
-          <ul className="space-y-1">
+          <ul className="divide-y divide-gray-200">
             {serviceHours.map((item) => (
-              <li key={item.label} className="flex items-center gap-2">
+              <li key={item.label} className="flex items-center justify-between py-3">
                 <span className="text-[16.5px] font-bold text-text-dark">{item.label}</span>
                 <span className="text-[16.5px] font-bold text-red-600">
                   {item.hours}
@@ -29,12 +29,12 @@ export function ServiceInfoCard() {
 
         {/* 服務電話 */}
         <div className="flex-1">
-          <h3 className="mb-2 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
+          <h3 className="mb-4 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
             服務電話
           </h3>
-          <ul className="space-y-2">
+          <ul className="divide-y divide-gray-200">
             {servicePhones.map((item) => (
-              <li key={item.region} className="flex items-center gap-2">
+              <li key={item.region} className="flex items-center justify-between py-3">
                 <span className="text-[16.5px] font-bold text-text-dark">{item.region}</span>
                 <a
                   href={`tel:${item.number.replace(/-/g, '')}`}
