@@ -9,8 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     jq \
     && rm -rf /var/lib/apt/lists/*
 
-# Claude Code CLI (global)
+# Claude Code CLI (global) — 版本由 image rebuild 控制，不在容器內自動更新
 RUN npm install -g @anthropic-ai/claude-code
+ENV DISABLE_AUTOUPDATER=1
 
 # Non-root user (required: --dangerously-skip-permissions blocks root)
 RUN useradd -m -s /bin/bash claude
