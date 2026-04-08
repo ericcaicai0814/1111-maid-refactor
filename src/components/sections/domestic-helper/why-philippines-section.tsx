@@ -5,22 +5,23 @@ export function WhyPhilippinesSection() {
   const { title, subtitle, features } = whyPhilippinesSectionData;
 
   return (
-    <section id="why-philippines" className="bg-brand-bg py-12 md:py-20">
-      <div className="mx-auto max-w-6xl px-4">
+    <section id="why-philippines" className="py-6 md:py-[26px]">
+      <div className="mx-auto max-w-[1100px] px-4 md:px-5">
         <div className="mb-10 text-center">
-          <h2 className="text-2xl font-bold text-brand-dark md:text-3xl">
+          <h2 className="text-[28px] font-semibold text-brand-dark">
             {title}
           </h2>
-          <p className="mt-3 text-text-mid">{subtitle}</p>
+          <p className="mt-3 text-lg text-brand">{subtitle}</p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
-            <div
+            <li
               key={feature.title}
-              className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-md"
+              className="flex flex-col rounded-2xl bg-white p-5"
+              style={{ boxShadow: 'rgba(131, 124, 207, 0.18) 0px 4px 20px 0px', gap: '12px' }}
             >
-              <div className="mb-4">
+              <div>
                 <Image
                   src={feature.image}
                   alt={feature.title}
@@ -29,15 +30,15 @@ export function WhyPhilippinesSection() {
                   className="mx-auto size-40 rounded-full object-cover"
                 />
               </div>
-              <h3 className="mb-2 font-bold text-brand-dark">
+              <h3 className="text-[16.5px] font-bold text-brand">
                 {feature.title}
               </h3>
               <p className="text-sm leading-relaxed text-text-mid">
                 {feature.description}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

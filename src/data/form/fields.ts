@@ -79,7 +79,7 @@ export const formFields: FormField[] = [
   {
     name: 'title',
     type: 'radio',
-    label: '申請人身份',
+    label: '稱謂',
     required: true,
   },
   {
@@ -104,7 +104,7 @@ export const formFields: FormField[] = [
   {
     name: 'familyStatus',
     type: 'checkbox',
-    label: '您是否有以下特殊資格',
+    label: '家庭狀況',
     required: true,
   },
   {
@@ -116,7 +116,7 @@ export const formFields: FormField[] = [
   {
     name: 'nationalityPreference',
     type: 'checkbox',
-    label: '是否有指定的外傭國籍',
+    label: '幫傭國籍偏好',
     required: true,
   },
   {
@@ -146,7 +146,7 @@ export const formFields: FormField[] = [
   {
     name: 'contactTime',
     type: 'checkbox',
-    label: '可聯絡時間',
+    label: '方便聯絡時段',
     required: true,
   },
 ];

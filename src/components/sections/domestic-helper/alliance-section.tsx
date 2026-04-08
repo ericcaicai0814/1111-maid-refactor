@@ -5,18 +5,21 @@ export function AllianceSection() {
   const { title, description, features } = allianceSectionData;
 
   return (
-    <section id="alliance" className="py-12 md:py-20">
-      <div className="mx-auto max-w-6xl px-4">
+    <section id="alliance" className="py-6 md:py-[26px]">
+      <div className="mx-auto max-w-[1100px] px-4 md:px-5">
         <div className="mb-10 text-center">
-          <h2 className="text-2xl font-bold text-brand-dark md:text-3xl">
+          <h2 className="text-[28px] font-semibold text-brand-dark">
             {title}
           </h2>
-          <p className="mt-3 text-text-mid">{description}</p>
+          <p className="mt-3 text-lg text-brand">{description}</p>
         </div>
 
-        <div className="grid items-start gap-8 md:grid-cols-2">
+        <div className="grid items-start gap-5 md:grid-cols-2">
           {/* 左側大圖 */}
-          <div className="overflow-hidden rounded-2xl shadow-md">
+          <div
+            className="overflow-hidden rounded-2xl"
+            style={{ boxShadow: 'rgba(131, 124, 207, 0.18) 0px 4px 20px 0px' }}
+          >
             <Image
               src="/images/domestic-helper/alliance-hero.png"
               alt="跨海嚴選菲律賓幫傭"
@@ -27,9 +30,13 @@ export function AllianceSection() {
           </div>
 
           {/* 右側 3 個特色 */}
-          <div className="space-y-6">
+          <ul className="space-y-5">
             {features.map((feature) => (
-              <div key={feature.title} className="flex gap-4">
+              <li
+                key={feature.title}
+                className="flex gap-5 rounded-2xl bg-white p-5"
+                style={{ boxShadow: 'rgba(131, 124, 207, 0.18) 0px 4px 20px 0px' }}
+              >
                 <div className="shrink-0">
                   <Image
                     src={feature.image}
@@ -40,16 +47,16 @@ export function AllianceSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-bold text-brand-dark">
+                  <h3 className="mb-1 text-[16.5px] font-bold text-brand-dark">
                     {feature.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-text-mid">
                     {feature.description}
                   </p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

@@ -70,7 +70,7 @@ export function FAQAccordionSection() {
         {/* 標題區 */}
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold text-brand-dark md:text-3xl">
-            申請問答
+            常見問題
           </h1>
           <p className="mt-2 text-text-mid">
             關於外籍幫傭申請，您最關心的問題我們都替您整理好了

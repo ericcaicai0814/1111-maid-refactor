@@ -15,7 +15,7 @@ describe('HeroSection', () => {
 
   it('renders highlighted text', () => {
     render(<HeroSection />);
-    expect(screen.getByText('只要1名12歲以下子女')).toBeInTheDocument();
+    expect(screen.getByText('只要12歲以下子女')).toBeInTheDocument();
   });
 
   it('renders both CTA buttons', () => {

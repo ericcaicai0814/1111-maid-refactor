@@ -42,6 +42,14 @@ prisma/            # Prisma schema + migrations
 
 Next.js 16 (App Router) · TypeScript strict · Tailwind CSS v4 · shadcn/ui · Prisma · PostgreSQL
 
+## 多項修復流程
+
+待修項目超過 2 個時：
+1. 動手前先用 TaskCreate 建立完整 checklist（從對話歷史中彙整，不只看最新訊息）
+2. 列出清單後等用戶確認才開始修復
+3. 逐項修復，每完成一項立即 TaskUpdate
+4. 總結時必須同時列出「已修」和「未修」，不可只列已修
+
 ## Commit 慣例
 
 繁體中文 Conventional Commits：`feat: 新增xxx` / `fix: 修正xxx` / `docs: 更新xxx`

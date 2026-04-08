@@ -9,32 +9,37 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 bg-brand text-white">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-        <Link href={publicPaths.home} className="shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/logo.png"
-            alt="1111人力銀行"
-            className="h-8 w-auto"
-          />
-        </Link>
+    <header className="fixed top-0 right-0 left-0 z-50">
+      {/* Row 1: Logo bar */}
+      <div className="bg-white">
+        <div className="mx-auto flex h-14 max-w-[1100px] items-center px-4 md:px-10">
+          <Link href={publicPaths.home} className="shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/domestic-helper/外傭專區_LOGO-300x76.png"
+              alt="1111外傭專區"
+              className="h-10 w-auto"
+            />
+          </Link>
+          <MobileMenuButton />
+        </div>
+      </div>
 
-        <nav className="hidden gap-1 sm:flex">
+      {/* Row 2: Nav bar */}
+      <nav className="hidden bg-brand-dark sm:block">
+        <div className="mx-auto flex h-[52px] max-w-[1100px] items-center gap-5 px-4 md:px-5">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               aria-current={pathname === item.href ? 'page' : undefined}
-              className="rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:bg-white/20 aria-[current=page]:bg-white/25"
+              className="text-xl font-bold text-white transition-colors hover:text-brand-accent aria-[current=page]:text-brand-accent"
             >
               {item.label}
             </Link>
           ))}
-        </nav>
-
-        <MobileMenuButton />
-      </div>
+        </div>
+      </nav>
     </header>
   );
 }
@@ -42,7 +47,7 @@ export function SiteHeader() {
 function MobileMenuButton() {
   return (
     <button
-      className="flex size-9 items-center justify-center rounded-md hover:bg-white/20 sm:hidden"
+      className="ml-auto flex size-9 items-center justify-center rounded-md text-brand-dark hover:bg-brand-bg sm:hidden"
       aria-label="開啟選單"
     >
       <svg

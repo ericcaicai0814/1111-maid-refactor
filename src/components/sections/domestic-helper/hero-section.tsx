@@ -8,9 +8,26 @@ export function HeroSection() {
   const descriptionParts = description.split(highlight);
 
   return (
-    <section className="bg-brand-dark text-white">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
-        <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-12">
+    <section
+      className="relative"
+      style={{
+        background:
+          'linear-gradient(rgb(177, 172, 230), rgb(236, 235, 247) 70%, rgba(255, 255, 255, 0))',
+      }}
+    >
+      {/* 背景圖層（覆蓋在 gradient 上）+ 半透明遮罩 */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url(/images/domestic-helper/hero-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.18,
+        }}
+      />
+      <div className="relative mx-auto max-w-[1100px] px-4 py-8 md:px-10 md:py-12">
+        <div className="grid gap-7 md:grid-cols-2 md:items-center">
           <div className="text-center md:text-left">
             <div className="mb-4 flex items-center gap-3 max-md:justify-center">
               <Image
@@ -20,29 +37,45 @@ export function HeroSection() {
                 height={48}
                 className="h-12 w-auto"
               />
-              <span className="text-2xl font-bold md:text-3xl">幫傭專案</span>
+              <span className="text-[52px] font-extrabold text-text-dark">
+                幫傭專案
+              </span>
             </div>
-            <p className="mb-2 text-sm font-semibold tracking-widest text-brand-light opacity-80">
-              {eyebrow}
-            </p>
-            <h1 className="mb-4 text-4xl font-bold leading-tight md:text-5xl">
-              {title}
-            </h1>
-            <p className="mb-8 text-lg leading-relaxed text-white/80">
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <p className="text-2xl font-bold text-brand-dark">
+                {eyebrow}
+              </p>
+              <div
+                className="inline-block origin-center rounded-lg px-3 py-1"
+                style={{
+                  transform: 'rotateZ(4deg)',
+                  background: 'linear-gradient(45deg, rgb(171, 135, 9), rgb(245, 200, 66))',
+                }}
+              >
+                <h2 className="text-[31.5px] font-bold leading-[44.1px] text-white">
+                  {title}
+                </h2>
+              </div>
+            </div>
+            <p className="mb-8 text-lg leading-[30.6px] text-text-dark">
               {descriptionParts[0]}
-              <span className="font-bold text-brand-accent">{highlight}</span>
+              <strong className="font-bold text-text-dark">{highlight}</strong>
               {descriptionParts[1]}
             </p>
             <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap md:items-start">
               <Link
                 href={primaryCTA.href}
-                className="rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-brand-dark"
+                className="rounded-2xl px-[18px] py-2 text-lg font-semibold text-white transition hover:opacity-90"
+                style={{ backgroundColor: 'rgb(131, 124, 207)' }}
               >
                 {primaryCTA.label}
               </Link>
               <Link
                 href={secondaryCTA.href}
-                className="rounded-full bg-brand-accent px-6 py-3 font-semibold text-brand-dark transition hover:opacity-90"
+                className="rounded-2xl px-[18px] py-2 text-lg font-semibold text-white transition hover:opacity-90"
+                style={{
+                  background: 'linear-gradient(135deg, rgb(131,124,207), rgb(61,55,142))',
+                }}
               >
                 {secondaryCTA.label}
               </Link>

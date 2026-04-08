@@ -46,11 +46,11 @@ export const domesticHelperLogos: {
   readonly secondary: Pick<ResponsiveImage, 'src' | 'alt'>;
 } = {
   primary: {
-    src: '/images/1111LOGO.png',
-    alt: '1111人力銀行',
-    width: 1424,
-    height: 380,
-    srcSet: '/images/1111LOGO-1024x273.png 1024w, /images/1111LOGO-300x80.png 300w, /images/1111LOGO-768x205.png 768w, /images/1111LOGO.png 1424w',
+    src: '/images/domestic-helper/外傭專區_LOGO.png',
+    alt: '1111外傭專區',
+    width: 1080,
+    height: 272,
+    srcSet: '/images/domestic-helper/外傭專區_LOGO-1024x258.png 1024w, /images/domestic-helper/外傭專區_LOGO-300x76.png 300w, /images/domestic-helper/外傭專區_LOGO-768x193.png 768w, /images/domestic-helper/外傭專區_LOGO.png 1080w',
   },
   secondary: {
     src: '/images/domestic-helper/1111logo_number.svg',
@@ -64,8 +64,8 @@ export const heroData: HeroData = {
   eyebrow: '給孩子一個英語環境的',
   title: '育兒神隊友',
   description:
-    '2026政府新制放寬！只要1名12歲以下子女即可申請。嚴選菲律賓頂尖人才，具英語優勢與醫護背景，給孩子最安心的成長陪伴。',
-  highlight: '只要1名12歲以下子女',
+    '2026政府全面放寬！只要12歲以下子女即可申請。\n嚴選菲律賓頂尖人才，具英語優勢與醫護背景，給孩子最安心的成長陪伴。',
+  highlight: '只要12歲以下子女',
   primaryCTA: {
     label: '查看申請資格',
     href: publicPaths.home,

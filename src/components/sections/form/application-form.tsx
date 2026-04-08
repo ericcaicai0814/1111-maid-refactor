@@ -310,7 +310,7 @@ export function ApplicationForm({ onSubmit }: ApplicationFormProps) {
             })}
 
             <Button type="submit" className="w-full">
-              送出報名
+              送出申請
             </Button>
           </form>
         </CardContent>
