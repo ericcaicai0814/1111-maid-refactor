@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         destination: '/foreign-domestic-helper-under-12',
         permanent: true,
       },
+      {
+        source: '/foreign-domestic-helper-under-12/foreign-domestic-form',
+        destination: '/foreign-domestic-helper-under-12/form',
+        permanent: true,
+      },
     ];
   },
 };

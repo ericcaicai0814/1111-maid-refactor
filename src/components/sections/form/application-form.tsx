@@ -162,7 +162,7 @@ export function ApplicationForm({ onSubmit }: ApplicationFormProps) {
     <FormProvider {...methods}>
       <Card className="mx-auto max-w-2xl">
         <CardHeader>
-          <CardTitle className="text-xl">外籍幫傭申請表單</CardTitle>
+          <CardTitle className="text-xl">申請外籍幫傭</CardTitle>
         </CardHeader>
         <CardContent>
           <form
@@ -310,7 +310,7 @@ export function ApplicationForm({ onSubmit }: ApplicationFormProps) {
             })}
 
             <Button type="submit" className="w-full">
-              送出申請
+              送出報名
             </Button>
           </form>
         </CardContent>
