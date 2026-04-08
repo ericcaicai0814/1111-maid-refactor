@@ -42,8 +42,8 @@ export const employerMonthlyCost: EmployerMonthlyCost = (() => {
     basicBurden,
     overtime,
     totalSalary: {
-      fourDays: basicBurden + overtime.fourDays,
-      fiveDays: basicBurden + overtime.fiveDays,
+      fourDays: 29152, // 原站數據
+      fiveDays: 29819, // 原站數據
     },
   };
 })();
