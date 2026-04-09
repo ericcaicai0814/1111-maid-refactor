@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import {
   useForm,
   useFormContext,
@@ -30,6 +30,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { BirthdayRepeater } from './birthday-repeater';
 import { FormSuccess } from './form-success';
+import { submitApplication } from '@/actions/application';
 
 interface ApplicationFormProps {
   onSubmit?: SubmitHandler<ApplicationFormData>;
@@ -37,6 +38,8 @@ interface ApplicationFormProps {
 
 export function ApplicationForm({ onSubmit }: ApplicationFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
 
   const methods = useForm<ApplicationFormData>({
     resolver: zodResolver(ApplicationFormSchema),
@@ -74,12 +77,24 @@ export function ApplicationForm({ onSubmit }: ApplicationFormProps) {
   const contactTimeValue = watch('contactTime');
 
   const handleFormSubmit: SubmitHandler<ApplicationFormData> = (data) => {
-    if (onSubmit) {
-      onSubmit(data);
-    } else {
-      console.log(data);
-    }
-    setSubmitted(true);
+    setSubmitError(null);
+    startTransition(async () => {
+      try {
+        if (onSubmit) {
+          onSubmit(data);
+          setSubmitted(true);
+          return;
+        }
+        const result = await submitApplication(data);
+        if (result.success) {
+          setSubmitted(true);
+        } else {
+          setSubmitError(result.error ?? '送出失敗，請稍後再試');
+        }
+      } catch {
+        setSubmitError('送出失敗，請稍後再試');
+      }
+    });
   };
 
   if (submitted) {
@@ -309,8 +324,11 @@ export function ApplicationForm({ onSubmit }: ApplicationFormProps) {
               );
             })}
 
-            <Button type="submit" className="w-full">
-              送出申請
+            {submitError && (
+              <p className="text-center text-sm text-red-500">{submitError}</p>
+            )}
+            <Button type="submit" className="w-full" disabled={isPending}>
+              {isPending ? '送出中...' : '送出申請'}
             </Button>
           </form>
         </CardContent>
