@@ -12,8 +12,9 @@ describe('ProcessFlowSection', () => {
 
   it('renders all 6 step titles', () => {
     render(<ProcessFlowSection />);
-    expect(screen.getByText('符合申請條件資格')).toBeInTheDocument();
-    expect(screen.getByText('辦理國內求才登記')).toBeInTheDocument();
+    // Desktop zigzag + mobile stack both render the same steps → use getAllByText
+    expect(screen.getAllByText('符合申請條件資格').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('辦理國內求才登記').length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders subtitle', () => {

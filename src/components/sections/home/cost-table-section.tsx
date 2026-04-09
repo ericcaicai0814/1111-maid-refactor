@@ -12,11 +12,17 @@ export function CostTableSection() {
   const cost = employerMonthlyCost;
 
   return (
-    <section id="cost" className="bg-brand-bg py-12 md:py-16">
+    <section id="cost" className="bg-white py-12 md:py-16">
       <div className="mx-auto max-w-5xl px-4">
-        <h2 className="text-center text-2xl font-bold text-brand-dark md:text-3xl">
-          外籍家庭幫傭月薪薪資及費用
-        </h2>
+        {/* 標題欄 — 僅標題列有背景色 */}
+        <div
+          className="rounded-t-lg px-6 py-3"
+          style={{ background: 'var(--primary-light)' }}
+        >
+          <h2 className="text-center text-2xl font-bold text-brand-dark md:text-3xl">
+            外籍家庭幫傭月薪薪資及費用
+          </h2>
+        </div>
 
         {/* 雇主每月費用 */}
         <div className="mt-8">

@@ -19,22 +19,22 @@ export interface CalculationResult {
 /** 小朋友相關項目 */
 export const childItems: CalculatorItem[] = [
   {
+    id: 'child-special',
+    label: '未滿 6 歲遲緩/12 歲以下身障/罕病/特境',
+    weight: 4,
+    category: 'child',
+    min: 0,
+  },
+  {
     id: 'child-6-to-12',
     label: '滿 6 歲，未滿 12 歲',
-    weight: 4,
+    weight: 6,
     category: 'child',
     min: 0,
   },
   {
     id: 'child-under-6',
     label: '未滿 6 歲',
-    weight: 6,
-    category: 'child',
-    min: 0,
-  },
-  {
-    id: 'child-special',
-    label: '未滿 6 歲遲緩/12 歲以下身障/罕病/特境',
     weight: 10,
     category: 'child',
     min: 0,
@@ -44,22 +44,22 @@ export const childItems: CalculatorItem[] = [
 /** 其他加分項目 */
 export const extraItems: CalculatorItem[] = [
   {
+    id: 'elder-80-plus',
+    label: '長者滿 80 歲以上',
+    weight: 3,
+    category: 'extra',
+    min: 0,
+  },
+  {
     id: 'single-parent',
     label: '單親/無親/父母一方身障',
-    weight: 3,
+    weight: 1,
     category: 'extra',
     min: 0,
   },
   {
     id: 'elder-75-80',
     label: '長者滿 75，未滿 80 歲',
-    weight: 1,
-    category: 'extra',
-    min: 0,
-  },
-  {
-    id: 'elder-80-plus',
-    label: '長者滿 80 歲以上',
     weight: 2,
     category: 'extra',
     min: 0,

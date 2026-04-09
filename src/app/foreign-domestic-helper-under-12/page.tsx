@@ -1,7 +1,6 @@
 import { HeroBanner, MiniFAQ } from '@/components/shared';
 import {
   PolicyHighlightSection,
-  EligibilityCalculator,
   CostTableSection,
   ProcessFlowSection,
   DocumentListSection,
@@ -24,7 +23,6 @@ export default function HomePage() {
       <div className="relative mx-auto max-w-7xl lg:flex lg:gap-8">
         <div className="min-w-0 flex-1">
           <PolicyHighlightSection />
-          <EligibilityCalculator />
           <CostTableSection />
           <ProcessFlowSection />
           <DocumentListSection />

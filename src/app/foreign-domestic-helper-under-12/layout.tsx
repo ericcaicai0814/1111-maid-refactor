@@ -5,7 +5,7 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
     <>
       <SiteHeader />
       {/* mobile: logo row only (56px), desktop: logo + nav (56+52=108px) */}
-      <main className="pt-14 sm:pt-[108px]">{children}</main>
+      <main className="pt-14 sm:pt-[112px]">{children}</main>
       <ServiceInfoCard />
       <SiteFooter />
       <FooterCTA />

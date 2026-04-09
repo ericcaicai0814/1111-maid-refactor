@@ -22,45 +22,45 @@ describe('calculateEligibility', () => {
   });
 
   describe('標準費率：總分 ≥ 4 → 安定費 $5,000', () => {
-    it('1 名 6-12 歲 (4分) → $5,000', () => {
+    it('1 名 6-12 歲 (6分) → $5,000', () => {
       const result = calculateEligibility(makeValues({ 'child-6-to-12': 1 }));
+      expect(result.eligible).toBe(true);
+      expect(result.totalPoints).toBe(6);
+      expect(result.stabilizationFee).toBe(5000);
+      expect(result.severity).toBe('warning');
+    });
+
+    it('1 名未滿 6 歲 (10分) → $2,000（總分 ≥ 10）', () => {
+      const result = calculateEligibility(makeValues({ 'child-under-6': 1 }));
+      expect(result.eligible).toBe(true);
+      expect(result.totalPoints).toBe(10);
+      expect(result.stabilizationFee).toBe(2000);
+    });
+  });
+
+  describe('特境減免：特境或總分 ≥ 10 → 安定費 $2,000', () => {
+    it('1 名特殊兒童 (4分) → $5,000', () => {
+      const result = calculateEligibility(makeValues({ 'child-special': 1 }));
       expect(result.eligible).toBe(true);
       expect(result.totalPoints).toBe(4);
       expect(result.stabilizationFee).toBe(5000);
       expect(result.severity).toBe('warning');
     });
 
-    it('1 名未滿 6 歲 (6分) → $5,000', () => {
-      const result = calculateEligibility(makeValues({ 'child-under-6': 1 }));
-      expect(result.eligible).toBe(true);
-      expect(result.totalPoints).toBe(6);
-      expect(result.stabilizationFee).toBe(5000);
-    });
-  });
-
-  describe('特境減免：特境或總分 ≥ 10 → 安定費 $2,000', () => {
-    it('1 名特殊兒童 (10分) → $2,000', () => {
-      const result = calculateEligibility(makeValues({ 'child-special': 1 }));
-      expect(result.eligible).toBe(true);
-      expect(result.totalPoints).toBe(10);
-      expect(result.stabilizationFee).toBe(2000);
-      expect(result.severity).toBe('success');
-    });
-
-    it('單親 + 1 名 6-12 歲 → $2,000（特境優先）', () => {
+    it('單親 + 1 名 6-12 歲 → $2,000（特境優先，single-parent weight=1）', () => {
       const result = calculateEligibility(
         makeValues({ 'child-6-to-12': 1, 'single-parent': 1 }),
       );
       expect(result.eligible).toBe(true);
-      expect(result.totalPoints).toBe(7); // 4 + 3
+      expect(result.totalPoints).toBe(7); // 6 + 1
       expect(result.stabilizationFee).toBe(2000);
       expect(result.severity).toBe('success');
     });
 
-    it('2 名未滿 6 歲 (12分) → $2,000（總分 ≥ 10）', () => {
+    it('2 名未滿 6 歲 (20分) → $2,000（總分 ≥ 10）', () => {
       const result = calculateEligibility(makeValues({ 'child-under-6': 2 }));
       expect(result.eligible).toBe(true);
-      expect(result.totalPoints).toBe(12);
+      expect(result.totalPoints).toBe(20);
       expect(result.stabilizationFee).toBe(2000);
     });
   });
@@ -74,8 +74,8 @@ describe('calculateEligibility', () => {
           'elder-80-plus': 1,
         }),
       );
-      // 2*4 + 1*6 + 1*2 = 16
-      expect(result.totalPoints).toBe(16);
+      // 2*6 + 1*10 + 1*3 = 25
+      expect(result.totalPoints).toBe(25);
       expect(result.stabilizationFee).toBe(2000);
     });
 
@@ -90,7 +90,7 @@ describe('calculateEligibility', () => {
           'elder-80-plus': 1,
         }),
       );
-      // 4 + 6 + 10 + 3 + 1 + 2 = 26
+      // 6 + 10 + 4 + 1 + 2 + 3 = 26
       expect(result.totalPoints).toBe(26);
       expect(result.stabilizationFee).toBe(2000);
     });

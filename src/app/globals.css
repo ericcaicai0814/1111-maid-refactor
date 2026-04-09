@@ -67,6 +67,12 @@
 
 @layer base {
   :root {
+    /* Brand shorthand CSS vars (used inline with var()) */
+    --primary-light: #ecebf7;
+    --primary: #837ccf;
+    --primary-dark: #3d378e;
+    --shadow: 0 4px 20px rgba(131, 124, 207, 0.15);
+
     --background: 0 0% 100%;
     --foreground: 252 29% 22%;
     --card: 0 0% 100%;
