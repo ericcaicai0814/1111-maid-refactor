@@ -26,6 +26,12 @@ function Wrapper({
 }
 
 describe('BirthdayRepeater', () => {
+  it('shows placeholder hint text for date inputs', () => {
+    render(<Wrapper count={1} />);
+    // #9: should display placeholder hint adjacent to date input
+    expect(screen.getByText('請選擇出生年月日')).toBeInTheDocument();
+  });
+
   it('renders the correct number of date inputs', async () => {
     render(<Wrapper count={2} defaultBirthdays={['', '']} />);
 
