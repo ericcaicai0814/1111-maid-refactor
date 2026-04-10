@@ -8,32 +8,64 @@ describe('ApplicationForm', () => {
     render(<ApplicationForm />);
 
     expect(screen.getByText('申請人大名')).toBeInTheDocument();
-    expect(screen.getByText('稱謂')).toBeInTheDocument();
+    // #1: 稱謂 → 申請人身份
+    expect(screen.getByText('申請人身份')).toBeInTheDocument();
+    expect(screen.queryByText('稱謂')).not.toBeInTheDocument();
     expect(screen.getByText(/12歲以下小朋友/)).toBeInTheDocument();
     expect(screen.getByText('小朋友的年齡')).toBeInTheDocument();
     expect(screen.getByText('小朋友出生年月日')).toBeInTheDocument();
-    expect(screen.getByText('家庭狀況')).toBeInTheDocument();
+    // #2: 家庭狀況 → 您是否有以下特殊資格
+    expect(screen.getByText('您是否有以下特殊資格')).toBeInTheDocument();
+    expect(screen.queryByText('家庭狀況')).not.toBeInTheDocument();
     expect(screen.getByText(/戶籍所在地/)).toBeInTheDocument();
-    expect(screen.getByText('幫傭國籍偏好')).toBeInTheDocument();
+    // #3: 幫傭國籍偏好 → 是否有指定的外傭國籍
+    expect(screen.getByText('是否有指定的外傭國籍')).toBeInTheDocument();
+    expect(screen.queryByText('幫傭國籍偏好')).not.toBeInTheDocument();
     expect(screen.getByText('手機號碼')).toBeInTheDocument();
     expect(screen.getByText('Email')).toBeInTheDocument();
     expect(screen.getByText('服務單位')).toBeInTheDocument();
     expect(screen.getByText('職稱')).toBeInTheDocument();
-    expect(screen.getByText('方便聯絡時段')).toBeInTheDocument();
+    // #4: 方便聯絡時段 → 可聯絡時間
+    expect(screen.getByText('可聯絡時間')).toBeInTheDocument();
+    expect(screen.queryByText('方便聯絡時段')).not.toBeInTheDocument();
   });
 
-  it('renders the submit button', () => {
+  // #5: submit button text
+  it('renders the submit button with correct text', () => {
     render(<ApplicationForm />);
     expect(
-      screen.getByRole('button', { name: '送出申請' }),
+      screen.getByRole('button', { name: '送出報名' }),
     ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: '送出申請' }),
+    ).not.toBeInTheDocument();
+  });
+
+  // #7: 聯絡方式 section divider
+  it('renders 聯絡方式 section heading', () => {
+    render(<ApplicationForm />);
+    expect(screen.getByRole('heading', { name: '聯絡方式' })).toBeInTheDocument();
+  });
+
+  // #10: submit button style
+  it('submit button has correct style classes', () => {
+    render(<ApplicationForm />);
+    const btn = screen.getByRole('button', { name: '送出報名' });
+    expect(btn.className).toMatch(/rounded-full/);
+    expect(btn.className).toMatch(/bg-\[#0056b3\]/);
+  });
+
+  // #11: no Card wrapper — no CardHeader title text
+  it('does not render Card wrapper', () => {
+    render(<ApplicationForm />);
+    expect(screen.queryByText('申請外籍幫傭')).not.toBeInTheDocument();
   });
 
   it('shows validation errors when submitting empty form', async () => {
     const user = userEvent.setup();
     render(<ApplicationForm />);
 
-    await user.click(screen.getByRole('button', { name: '送出申請' }));
+    await user.click(screen.getByRole('button', { name: '送出報名' }));
 
     await waitFor(() => {
       expect(screen.getByText('請輸入申請人大名')).toBeInTheDocument();
@@ -93,7 +125,7 @@ describe('ApplicationForm', () => {
     // Check contactTime - click on label text
     await user.click(screen.getByText(/平日上午/));
 
-    await user.click(screen.getByRole('button', { name: '送出申請' }));
+    await user.click(screen.getByRole('button', { name: '送出報名' }));
 
     await waitFor(() => {
       expect(screen.getByText('表單送出成功')).toBeInTheDocument();

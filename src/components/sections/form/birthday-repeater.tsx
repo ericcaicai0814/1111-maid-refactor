@@ -44,6 +44,7 @@ export function BirthdayRepeater({ count }: BirthdayRepeaterProps) {
             type="date"
             {...register(`childBirthdays.${index}`)}
           />
+          <p className="text-xs text-muted-foreground mt-1">請選擇出生年月日</p>
           {errors.childBirthdays?.[index] && (
             <p className="mt-1 text-sm text-red-500">
               {typeof errors.childBirthdays[index] === 'object' &&
