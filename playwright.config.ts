@@ -7,6 +7,14 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
+  snapshotPathTemplate: '{testDir}/__screenshots__/{projectName}/{testFilePath}/{arg}{ext}',
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.2,
+      threshold: 0.3,
+      animations: 'disabled',
+    },
+  },
   use: {
     baseURL: 'http://localhost:3000/foreign-domestic-helper-under-12/',
     trace: 'on-first-retry',

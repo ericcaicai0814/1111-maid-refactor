@@ -1,0 +1,43 @@
+[
+  {
+    "tag": "nav",
+    "count": 1,
+    "classes": [
+      "bg-brand-dark hidden sm:block"
+    ]
+  },
+  {
+    "tag": "main",
+    "count": 1,
+    "classes": [
+      "pt-14 sm:pt-[112px]"
+    ]
+  },
+  {
+    "tag": "footer",
+    "count": 1,
+    "classes": [
+      "bg-brand-dark px-5 py-5 text-center"
+    ]
+  },
+  {
+    "tag": "section",
+    "count": 2,
+    "classes": [
+      "bg-white md:py-16 py-12",
+      "mt-5"
+    ]
+  },
+  {
+    "tag": "h1",
+    "count": 1,
+    "classes": [
+      "font-bold md:text-3xl text-2xl text-brand-dark"
+    ]
+  },
+  {
+    "tag": "h2",
+    "count": 0,
+    "classes": []
+  }
+]

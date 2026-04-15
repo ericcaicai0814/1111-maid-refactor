@@ -1,0 +1,56 @@
+[
+  {
+    "tag": "nav",
+    "count": 3,
+    "classes": [
+      "bg-brand-dark hidden sm:block",
+      "border border-[#eae8fa] mt-6 overflow-hidden rounded-xl",
+      "hidden lg:block max-h-[calc(100vh-6rem)] sticky top-20"
+    ]
+  },
+  {
+    "tag": "main",
+    "count": 1,
+    "classes": [
+      "pt-14 sm:pt-[112px]"
+    ]
+  },
+  {
+    "tag": "footer",
+    "count": 1,
+    "classes": [
+      "bg-brand-dark px-5 py-5 text-center"
+    ]
+  },
+  {
+    "tag": "section",
+    "count": 7,
+    "classes": [
+      "bg-white",
+      "md:py-16 py-12",
+      "bg-white md:py-16 py-12",
+      "md:py-16 py-12",
+      "bg-brand-bg md:py-16 py-12",
+      "md:py-16 py-12",
+      "mt-5"
+    ]
+  },
+  {
+    "tag": "h1",
+    "count": 1,
+    "classes": [
+      "font-bold leading-tight lg:text-4xl md:text-3xl text-2xl text-brand-dark"
+    ]
+  },
+  {
+    "tag": "h2",
+    "count": 5,
+    "classes": [
+      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
+      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
+      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
+      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
+      "font-bold md:text-3xl text-2xl text-brand-dark text-center"
+    ]
+  }
+]

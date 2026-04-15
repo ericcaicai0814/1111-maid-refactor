@@ -1,0 +1,255 @@
+{
+  "extractedFrom": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/domestic-helper/",
+  "extractedAt": "2026-04-08",
+  "viewport": "1265px (default headless)",
+
+  "header": {
+    "logoRow": {
+      "bg": "rgb(255, 255, 255)",
+      "height": "112.3px (total with nav), ~60px (logo row alone)",
+      "padding": "10px",
+      "position": "fixed",
+      "logo": {
+        "src": "外傭專區_LOGO-1024x258.png",
+        "width": "160px",
+        "height": "40px"
+      }
+    },
+    "navBar": {
+      "bg": "rgb(61, 55, 142)",
+      "height": "52px",
+      "display": "flex",
+      "links": {
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "20px",
+        "fontWeight": "700"
+      }
+    }
+  },
+
+  "hero": {
+    "wrapper": {
+      "backgroundImage": "linear-gradient(rgb(177, 172, 230), rgb(236, 235, 247) 70%, rgba(255, 255, 255, 0))",
+      "height": "~395px",
+      "position": "relative",
+      "margin": "0px 0px 52px"
+    },
+    "bgImage": {
+      "position": "absolute",
+      "src": "ChatGPT-Image-2026年4月1日-下午03_04_29.png",
+      "fillsEntireHero": true
+    },
+    "innerContainer": {
+      "padding": "32px 40px",
+      "gap": "normal 28px",
+      "maxWidth": "1100px",
+      "margin": "0px 82.5px (auto-centered)"
+    },
+    "texts": {
+      "h1_label": {
+        "text": "幫傭專案",
+        "color": "rgb(45, 42, 74)",
+        "fontSize": "52px",
+        "fontWeight": "800",
+        "lineHeight": "72.8px"
+      },
+      "h4_subtitle": {
+        "text": "給孩子一個英語環境的",
+        "color": "rgb(61, 55, 142)",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "33.6px"
+      },
+      "h2_tagline": {
+        "text": "育兒神隊友",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "31.5px",
+        "fontWeight": "700",
+        "lineHeight": "44.1px"
+      },
+      "description": {
+        "color": "rgb(45, 42, 74)",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "30.6px"
+      }
+    },
+    "buttons": {
+      "viewEligibility": {
+        "text": "查看申請資格",
+        "bg": "rgb(131, 124, 207)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "padding": "8px 18px",
+        "borderRadius": "16px"
+      },
+      "applyNow": {
+        "text": "立即報名",
+        "backgroundImage": "linear-gradient(135deg, rgb(131, 124, 207), rgb(61, 55, 142))",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "padding": "8px 18px",
+        "borderRadius": "16px"
+      }
+    }
+  },
+
+  "alliance": {
+    "heading": {
+      "text": "跨海嚴選：與菲律賓頂尖仲介戰略結盟",
+      "color": "rgb(61, 55, 142)",
+      "fontSize": "28px",
+      "fontWeight": "600",
+      "lineHeight": "39.2px"
+    },
+    "subtitle": {
+      "color": "rgb(131, 124, 207)",
+      "fontSize": "18px",
+      "lineHeight": "30.6px"
+    },
+    "cards": {
+      "bg": "rgb(255, 255, 255)",
+      "padding": "20px",
+      "gap": "28px (row) / 12px (column)",
+      "borderRadius": "16px",
+      "boxShadow": "rgba(131, 124, 207, 0.18) 0px 4px 20px 0px"
+    },
+    "cardTitles": {
+      "color": "rgb(61, 55, 142)",
+      "fontSize": "16.5px",
+      "fontWeight": "700"
+    }
+  },
+
+  "whyPhilippines": {
+    "heading": {
+      "text": "為什麼選擇菲律賓幫傭？打造高品質育兒生活",
+      "color": "rgb(61, 55, 142)",
+      "fontSize": "28px",
+      "fontWeight": "600",
+      "lineHeight": "39.2px"
+    },
+    "subtitle": {
+      "color": "rgb(131, 124, 207)",
+      "fontSize": "18px",
+      "lineHeight": "30.6px"
+    },
+    "cards": {
+      "bg": "rgb(255, 255, 255)",
+      "padding": "20px",
+      "gap": "12px",
+      "borderRadius": "16px",
+      "boxShadow": "rgba(131, 124, 207, 0.18) 0px 4px 20px 0px"
+    },
+    "cardTitles": {
+      "color": "rgb(131, 124, 207)",
+      "fontSize": "16.5px",
+      "fontWeight": "700"
+    }
+  },
+
+  "quoteCTA": {
+    "text": "「讓家務回歸專業，讓陪伴回歸高品質。1111 幫傭專案，為您引進最懂家庭需求的菲籍人才。」",
+    "fontSize": "24px",
+    "fontWeight": "700",
+    "lineHeight": "33.6px",
+    "textAlign": "center",
+    "backgroundImage": "-webkit-linear-gradient(45deg, rgb(131, 124, 207), rgb(61, 55, 142), rgb(245, 200, 66))",
+    "webkitBackgroundClip": "text",
+    "webkitTextFillColor": "transparent"
+  },
+
+  "ctaButton": {
+    "text": "點我立即報名",
+    "backgroundImage": "linear-gradient(135deg, rgb(131, 124, 207), rgb(61, 55, 142))",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "20px",
+    "fontWeight": "600",
+    "padding": "8px 20px",
+    "borderRadius": "16px",
+    "lineHeight": "34px"
+  },
+
+  "serviceInfoCard": {
+    "wrapper": {
+      "bg": "rgb(255, 255, 255)",
+      "padding": "20px 60px",
+      "gap": "40px",
+      "width": "1060px",
+      "borderRadius": "16px",
+      "border": "2px solid rgb(236, 235, 247)",
+      "boxShadow": "rgba(131, 124, 207, 0.18) 0px 4px 20px 0px",
+      "margin": "20px 0px 0px"
+    },
+    "sectionTitle": {
+      "color": "rgb(61, 55, 142)",
+      "fontSize": "19.5px",
+      "fontWeight": "700"
+    },
+    "dayLabels": {
+      "color": "rgb(45, 42, 74)",
+      "fontSize": "16.5px",
+      "fontWeight": "700"
+    },
+    "timeValues": {
+      "color": "rgb(220, 38, 38)",
+      "fontSize": "16.5px",
+      "fontWeight": "700",
+      "NOTE": "RED not gold! Previous implementation was wrong"
+    },
+    "phoneButtons": {
+      "bg": "rgb(124, 164, 207)",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "15px",
+      "fontWeight": "600",
+      "padding": "8px 15px",
+      "borderRadius": "12px"
+    }
+  },
+
+  "footer": {
+    "containerBg": "rgb(61, 55, 142)",
+    "padding": "20px",
+    "fontSize": "20px",
+    "copyrightText": {
+      "text": "© 2026 1111人力銀行 幫傭專案",
+      "color": "rgba(255, 255, 255, 0.7)",
+      "fontSize": "14px"
+    }
+  },
+
+  "floatingElements": {
+    "sideCTA": {
+      "text": "申請表單",
+      "position": "fixed",
+      "bottom": "90px",
+      "right": "20px",
+      "backgroundImage": "linear-gradient(135deg, rgb(131, 124, 207), rgb(61, 55, 142))",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "15px",
+      "fontWeight": "600",
+      "padding": "8px 15px",
+      "gap": "4px",
+      "borderRadius": "16px",
+      "width": "92px",
+      "height": "60.5px",
+      "display": "flex (column layout, icon + text)"
+    },
+    "backToTop": {
+      "position": "fixed",
+      "bottom": "32px",
+      "right": "20px",
+      "bg": "rgb(131, 124, 207)",
+      "width": "40px",
+      "height": "40px",
+      "borderRadius": "6px",
+      "boxShadow": "rgba(0, 0, 0, 0.1) 1px 5px 15px 0px"
+    }
+  },
+
+  "globalFont": "-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+  "globalColor": "rgb(45, 42, 74)",
+  "containerGap": "52px (between sections)"
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "tag": "nav",
+    "count": 1,
+    "classes": [
+      "bg-brand-dark hidden sm:block"
+    ]
+  },
+  {
+    "tag": "main",
+    "count": 2,
+    "classes": [
+      "pt-14 sm:pt-[112px]",
+      "container max-w-4xl mx-auto px-4 py-8"
+    ]
+  },
+  {
+    "tag": "footer",
+    "count": 1,
+    "classes": [
+      "bg-brand-dark px-5 py-5 text-center"
+    ]
+  },
+  {
+    "tag": "section",
+    "count": 2,
+    "classes": [
+      "md:py-16 py-12",
+      "mt-5"
+    ]
+  },
+  {
+    "tag": "h1",
+    "count": 0,
+    "classes": []
+  },
+  {
+    "tag": "h2",
+    "count": 2,
+    "classes": [
+      "border-b font-semibold pb-2 text-lg",
+      "font-bold md:text-3xl text-2xl text-brand-dark text-center"
+    ]
+  }
+]

@@ -1,0 +1,515 @@
+{
+  "url": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/domestic-helper/",
+  "extractedAt": "2026-04-08T06:56:39.347Z",
+  "sections": [
+    {
+      "index": 0,
+      "tag": "header",
+      "id": "brx-header",
+      "classes": "",
+      "styles": {
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 50% 50% / cover padding-box border-box",
+        "backgroundImage": "none",
+        "transform": "none",
+        "display": "block",
+        "flexDirection": "row",
+        "gap": "normal",
+        "position": "relative",
+        "padding": "0px",
+        "margin": "0px",
+        "borderLeft": "0px none rgb(221, 222, 223)",
+        "borderRadius": "0px",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(45, 42, 74)",
+        "maxWidth": "none",
+        "width": "1440px",
+        "boxShadow": "none",
+        "pseudoBefore": null
+      },
+      "children": [
+        {
+          "tag": "section",
+          "text": "幫傭專案申請資格報名表單常見問題",
+          "classes": "brxe-section",
+          "children": [
+            {
+              "tag": "div",
+              "text": "",
+              "classes": "brxe-container",
+              "children": [
+                {
+                  "tag": "img",
+                  "text": "",
+                  "classes": "brxe-image css-filter size-large",
+                  "src": "https://campaign.1111.com.tw/wp-content/uploads/2026/04/外傭專區_LOGO-1024x258.png",
+                  "alt": ""
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "text": "幫傭專案申請資格報名表單常見問題",
+              "classes": "brxe-block",
+              "children": [
+                {
+                  "tag": "div",
+                  "text": "幫傭專案申請資格報名表單常見問題",
+                  "classes": "brxe-container",
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "text": "幫傭專案",
+                      "classes": "brxe-heading"
+                    },
+                    {
+                      "tag": "h3",
+                      "text": "申請資格",
+                      "classes": "brxe-heading"
+                    },
+                    {
+                      "tag": "h3",
+                      "text": "報名表單",
+                      "classes": "brxe-heading"
+                    },
+                    {
+                      "tag": "h3",
+                      "text": "常見問題",
+                      "classes": "brxe-heading"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rect": {
+        "w": 1440,
+        "h": 0
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": "brxe-eqzgrp",
+      "classes": "brxe-section",
+      "styles": {
+        "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+        "backgroundImage": "none",
+        "transform": "none",
+        "display": "flex",
+        "flexDirection": "column",
+        "gap": "normal",
+        "position": "fixed",
+        "padding": "0px",
+        "margin": "0px",
+        "borderLeft": "0px none rgb(221, 222, 223)",
+        "borderRadius": "0px",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(45, 42, 74)",
+        "maxWidth": "100%",
+        "width": "1440px",
+        "boxShadow": "none",
+        "pseudoBefore": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "text": "",
+          "classes": "brxe-container",
+          "children": [
+            {
+              "tag": "img",
+              "text": "",
+              "classes": "brxe-image css-filter size-large",
+              "src": "https://campaign.1111.com.tw/wp-content/uploads/2026/04/外傭專區_LOGO-1024x258.png",
+              "alt": ""
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "text": "幫傭專案申請資格報名表單常見問題",
+          "classes": "brxe-block",
+          "children": [
+            {
+              "tag": "div",
+              "text": "幫傭專案申請資格報名表單常見問題",
+              "classes": "brxe-container",
+              "children": [
+                {
+                  "tag": "h3",
+                  "text": "幫傭專案",
+                  "classes": "brxe-heading",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "幫傭專案",
+                      "classes": "",
+                      "href": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/domestic-helper/"
+                    }
+                  ]
+                },
+                {
+                  "tag": "h3",
+                  "text": "申請資格",
+                  "classes": "brxe-heading",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "申請資格",
+                      "classes": "",
+                      "href": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/"
+                    }
+                  ]
+                },
+                {
+                  "tag": "h3",
+                  "text": "報名表單",
+                  "classes": "brxe-heading",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "報名表單",
+                      "classes": "",
+                      "href": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/foreign-domestic-form/"
+                    }
+                  ]
+                },
+                {
+                  "tag": "h3",
+                  "text": "常見問題",
+                  "classes": "brxe-heading",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "text": "常見問題",
+                      "classes": "",
+                      "href": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/faq/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rect": {
+        "w": 1440,
+        "h": 112
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": "brxe-wyntmj",
+      "classes": "brxe-section",
+      "styles": {
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "backgroundImage": "none",
+        "transform": "none",
+        "display": "flex",
+        "flexDirection": "column",
+        "gap": "normal",
+        "position": "static",
+        "padding": "0px",
+        "margin": "114px 0px 60px",
+        "borderLeft": "0px none rgb(221, 222, 223)",
+        "borderRadius": "0px",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(45, 42, 74)",
+        "maxWidth": "100%",
+        "width": "1440px",
+        "boxShadow": "none",
+        "pseudoBefore": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "text": "幫傭專案給孩子一個英語環境的育兒神隊友2026政府全面放寬！只要12歲以下子女即可申請。\n嚴選菲律賓頂尖人才，具英語優勢與醫護背景，給孩子最安心的成長陪伴。\n查",
+          "classes": "brxe-block",
+          "children": [
+            {
+              "tag": "div",
+              "text": "",
+              "classes": "brxe-div"
+            },
+            {
+              "tag": "div",
+              "text": "幫傭專案給孩子一個英語環境的育兒神隊友2026政府全面放寬！只要12歲以下子女即可申請。\n嚴選菲律賓頂尖人才，具英語優勢與醫護背景，給孩子最安心的成長陪伴。\n查",
+              "classes": "brxe-container",
+              "children": [
+                {
+                  "tag": "div",
+                  "text": "幫傭專案給孩子一個英語環境的育兒神隊友2026政府全面放寬！只要12歲以下子女即可申請。\n嚴選菲律賓頂尖人才，具英語優勢與醫護背景，給孩子最安心的成長陪伴。\n查",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "text": "幫傭專案給孩子一個英語環境的育兒神隊友2026政府全面放寬！只要12歲以下子女即可申請。\n嚴選菲律賓頂尖人才，具英語優勢與醫護背景，給孩子最安心的成長陪伴。",
+                      "classes": "brxe-block"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "查看申請資格立即報名",
+                      "classes": "brxe-block"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "text": "",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "img",
+                      "text": "",
+                      "classes": "brxe-image css-filter size-large",
+                      "src": "https://campaign.1111.com.tw/wp-content/uploads/2026/04/家庭幫傭做菜-1024x683.png",
+                      "alt": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "text": "跨海嚴選：與菲律賓頂尖仲介戰略結盟1111 幫傭專案，為您從源頭把關。我們直接對接菲律賓政府認證之優質大型仲介，確保人才素質與來源合法清白。菲律賓官方認證仲介直",
+          "classes": "brxe-container",
+          "children": [
+            {
+              "tag": "div",
+              "text": "跨海嚴選：與菲律賓頂尖仲介戰略結盟1111 幫傭專案，為您從源頭把關。我們直接對接菲律賓政府認證之優質大型仲介，確保人才素質與來源合法清白。菲律賓官方認證仲介直",
+              "classes": "brxe-block",
+              "children": [
+                {
+                  "tag": "div",
+                  "text": "跨海嚴選：與菲律賓頂尖仲介戰略結盟1111 幫傭專案，為您從源頭把關。我們直接對接菲律賓政府認證之優質大型仲介，確保人才素質與來源合法清白。",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "text": "跨海嚴選：與菲律賓頂尖仲介戰略結盟",
+                      "classes": "brxe-heading"
+                    },
+                    {
+                      "tag": "p",
+                      "text": "1111 幫傭專案，為您從源頭把關。我們直接對接菲律賓政府認證之優質大型仲介，確保人才素質與來源合法清白。",
+                      "classes": "brxe-heading"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "text": "菲律賓官方認證仲介直接對接菲律賓政府認證之大型仲介，確保人才來源合法清白，絕無非法層層轉介之疑慮，讓雇主聘僱更安心。雙重安全審核嚴格要求每一位幫傭具備「無犯罪紀",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "text": "",
+                      "classes": "brxe-block"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "菲律賓官方認證仲介直接對接菲律賓政府認證之大型仲介，確保人才來源合法清白，絕無非法層層轉介之疑慮，讓雇主聘僱更安心。雙重安全審核嚴格要求每一位幫傭具備「無犯罪紀",
+                      "classes": "brxe-block"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "text": "為什麼選擇菲律賓幫傭？打造高品質育兒生活英語系國家背景，結合高度專業素養，給孩子最自然的語言啟蒙與細心照顧。全天候英語啟蒙環境菲律賓為英語系國家，幫傭具備流利口",
+              "classes": "brxe-block",
+              "children": [
+                {
+                  "tag": "div",
+                  "text": "為什麼選擇菲律賓幫傭？打造高品質育兒生活英語系國家背景，結合高度專業素養，給孩子最自然的語言啟蒙與細心照顧。",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "text": "為什麼選擇菲律賓幫傭？打造高品質育兒生活",
+                      "classes": "brxe-heading"
+                    },
+                    {
+                      "tag": "p",
+                      "text": "英語系國家背景，結合高度專業素養，給孩子最自然的語言啟蒙與細心照顧。",
+                      "classes": "brxe-heading"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "text": "全天候英語啟蒙環境菲律賓為英語系國家，幫傭具備流利口說能力。在日常陪伴中，為孩子營造最自然的英語互動空間，讓語言學習融入生活點滴。高比例醫護教保資歷許多菲籍人才",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "text": "全天候英語啟蒙環境菲律賓為英語系國家，幫傭具備流利口說能力。在日常陪伴中，為孩子營造最自然的英語互動空間，讓語言學習融入生活點滴。",
+                      "classes": "brxe-block"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "高比例醫護教保資歷許多菲籍人才擁有護理或教保相關學歷，具備紮實的育兒知識。對於 12 歲以下孩童的照護與習慣養成，更加專業細心。",
+                      "classes": "brxe-block"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "溝通高效 品質感一致菲籍人才普遍受過良好教育，理解力高、溝通效率快。能精準執行家長對居家環境、烹飪健康與作息管理的標準要求。",
+                      "classes": "brxe-block"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "熱情耐心 融入家庭菲律賓文化極度重視家庭，天生具備高度親和力與耐心。在長期陪伴中，能溫暖融入家庭，成為孩子信賴的成長夥伴。",
+                      "classes": "brxe-block"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "text": "「讓家務回歸專業，讓陪伴回歸高品質。1111 幫傭專案，為您引進最懂家庭需求的菲籍人才。」",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "text": "「讓家務回歸專業，讓陪伴回歸高品質。1111 幫傭專案，為您引進最懂家庭需求的菲籍人才。」",
+                      "classes": "brxe-heading"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "a",
+              "text": "點我立即報名",
+              "classes": "brxe-button bricks-button",
+              "href": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/foreign-domestic-form/"
+            },
+            {
+              "tag": "div",
+              "text": "服務時間週一至週五8:30 ~ 21:00週六、日、國定假日9:00 ~ 21:00服務電話苗栗以北02-8787-1111中部地區04-2203-1111南部",
+              "classes": "brxe-block step-card",
+              "children": [
+                {
+                  "tag": "div",
+                  "text": "服務時間週一至週五8:30 ~ 21:00週六、日、國定假日9:00 ~ 21:00服務電話苗栗以北02-8787-1111中部地區04-2203-1111南部",
+                  "classes": "brxe-block",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "text": "服務時間週一至週五8:30 ~ 21:00週六、日、國定假日9:00 ~ 21:00",
+                      "classes": "brxe-div"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "服務電話苗栗以北02-8787-1111中部地區04-2203-1111南部地區07-958-1111",
+                      "classes": "brxe-div"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "a",
+          "text": "申請表單",
+          "classes": "brxe-button btn-apply-under12 bricks-button",
+          "href": "https://campaign.1111.com.tw/foreign-domestic-helper-under-12/foreign-domestic-form/",
+          "children": [
+            {
+              "tag": "i",
+              "text": "",
+              "classes": "fas fa-newspaper"
+            },
+            {
+              "tag": "br",
+              "text": "",
+              "classes": "sp"
+            }
+          ]
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "classes": "brxe-ba-back-to-top ba-back-to-top-show-on-scroll brx-animate-fast",
+          "href": "#",
+          "children": [
+            {
+              "tag": "i",
+              "text": "",
+              "classes": "fas fa-arrow-up-long icon"
+            }
+          ]
+        }
+      ],
+      "rect": {
+        "w": 1440,
+        "h": 2014
+      }
+    },
+    {
+      "index": 3,
+      "tag": "footer",
+      "id": "brx-footer",
+      "classes": "",
+      "styles": {
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 50% 50% / cover padding-box border-box",
+        "backgroundImage": "none",
+        "transform": "none",
+        "display": "block",
+        "flexDirection": "row",
+        "gap": "normal",
+        "position": "relative",
+        "padding": "0px",
+        "margin": "0px",
+        "borderLeft": "0px none rgb(221, 222, 223)",
+        "borderRadius": "0px",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(45, 42, 74)",
+        "maxWidth": "none",
+        "width": "1440px",
+        "boxShadow": "none",
+        "pseudoBefore": null
+      },
+      "children": [
+        {
+          "tag": "div",
+          "text": "© 2026 1111人力銀行 幫傭專案",
+          "classes": "brxe-container",
+          "children": [
+            {
+              "tag": "div",
+              "text": "© 2026 1111人力銀行 幫傭專案",
+              "classes": "brxe-text",
+              "children": [
+                {
+                  "tag": "p",
+                  "text": "© 2026 1111人力銀行 幫傭專案",
+                  "classes": ""
+                },
+                {
+                  "tag": "p",
+                  "text": "",
+                  "classes": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rect": {
+        "w": 1440,
+        "h": 104
+      }
+    }
+  ]
+}
