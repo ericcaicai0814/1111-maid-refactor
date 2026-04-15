@@ -49,3 +49,6 @@ content/
 
 # auto-generated
 next-env.d.ts
+tsconfig.tsbuildinfo
+.spectra/
+openspec/.vector-search.db*

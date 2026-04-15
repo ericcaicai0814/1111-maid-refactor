@@ -2,14 +2,15 @@
   "hooks": {
     "SessionEnd": [
       {
-        "matcher": "",
         "hooks": [
           {
-            "type": "command",
-            "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/scripts/session-end-parse.sh\""
+            "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/scripts/session-end-parse.sh\"",
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": ""
       }
     ]
-  }
+  },
+  "includeGitInstructions": false
 }
