@@ -20,26 +20,22 @@ export const applicationSteps: ProcessStep[] = [
   },
   {
     step: 3,
-    title: '向【公立就服機構】申請開具求才證明',
-    description: '求才證明有效期為 90 天',
-    emphasis: '公立就服機構',
+    title: '向公立就服機構申請開具求才證明',
+    description: '求才證明有效期為 90 天。',
   },
   {
     step: 4,
-    title: '向勞動部申請並取得【招募許可】',
-    description: '資格審核約 7 天\n招募效期為 9 個月',
-    emphasis: '招募許可',
+    title: '向勞動部申請並取得招募許可',
+    description: '資格審核約 7 天，招募效期為 9 個月。',
   },
   {
     step: 5,
     title: '自國外引進或接續聘僱移工',
-    description:
-      '國外引進：自移工入境日起 3 日內辦理通報。\n國內承接：自承接移工日起 3 日內辦理通報。',
+    description: '自入境日起 3 日內辦理通報，或承接移工日起 3 日內。',
   },
   {
     step: 6,
-    title: '向勞動部申請並取得【聘僱許可】',
+    title: '向勞動部申請並取得聘僱許可',
     description: '自入境或接續日起 15 日內辦理聘僱許可。',
-    emphasis: '聘僱許可',
   },
 ];

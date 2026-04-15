@@ -19,19 +19,19 @@ describe('CostTableSection', () => {
 
   it('renders employer cost data', () => {
     render(<CostTableSection />);
-    // baseSalary is in a table cell
-    expect(screen.getByText('$20,000元')).toBeInTheDocument();
+    // baseSalary appears in both mobile card and desktop table
+    const baseSalaryTexts = screen.getAllByText('$20,000元');
+    expect(baseSalaryTexts.length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders maid self-pay item names', () => {
     render(<CostTableSection />);
-    // 健保費 appears in both tables - use getAllByText
-    const healthInsTexts = screen.getAllByText('健保費');
-    expect(healthInsTexts.length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText('體檢費')).toBeInTheDocument();
+    // 健保費 and 體檢費 each appear in mobile card + desktop table
+    expect(screen.getAllByText('健保費').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('體檢費').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('renders all 3 tables', () => {
+  it('renders 3 desktop tables', () => {
     render(<CostTableSection />);
     const tables = screen.getAllByRole('table');
     expect(tables).toHaveLength(3);
