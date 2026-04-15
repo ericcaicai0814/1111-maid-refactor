@@ -296,40 +296,54 @@ npx playwright test visual-regression --update-snapshots
 2. 與 `.claude/old-domestic-helper.png` 等參考截圖做大方向比對（非像素級）
 3. `git add e2e/__screenshots__/` + commit：`test: 新增 visual regression baseline 截圖`
 
-### Step 4：Ralph Loop 指令
+### Step 4：Ralph Loop 指令（visual-qa driven）
+
+> **Driver 修正**：原版用 Playwright `toHaveScreenshot()` 當 gate 有概念漏洞 — baseline 是從當前站拍的，第 1 輪會全過，loop 空轉。
+> 修正後以 **visual-qa skill** 為 diff driver（比對當前站 vs `.claude/` 舊站參考），Playwright baseline 降為事後 regression guard（loop 運行期間不跑，避免假 fail）。
 
 ```bash
 /ralph-loop "
-你的任務是修正視覺差異，讓所有頁面通過視覺回歸測試（像素 + DOM 結構）。
+你的任務：讓三個公開頁面（/、/foreign-domestic-form、/faq）在桌面與手機斷點上視覺對齊舊站。
 
-參考資料：
-- .claude/style-reference.json — 色彩/間距/字級的正確值
-- .claude/style-alignment-status.md — 各頁面目前的對齊狀態
-- .claude/old-domestic-helper.png 等參考截圖 — 首頁/幫傭頁的視覺參考
+參考資料（皆位於 .claude/）：
+- old-domestic-helper.png、current-domestic-helper.png 等 — 舊站參考截圖
+- style-reference.json — 從舊站 computed style 抽取的色彩/間距/字級正確值
+- style-alignment-status.md — 過去三輪對齊進度（第三輪已完成幫傭專案頁精確對齊）
+- dom-structure-domestic-helper.json — DOM 結構對照
 
 每輪迭代：
-1. 執行 npm run test:e2e -- visual-regression
-2. 若像素測試失敗：讀取 test-results/ 中的 diff 截圖，判斷差異位置
-3. 若結構測試失敗：比對 snapshot 差異，修正 DOM 結構（tag/class/巢狀）
-4. 第一輪額外執行 visual-qa 產出完整差異清單作為修正指引
-5. 修改對應的 CSS / JSX（一輪最多修 3 項），參照 style-reference.json 確認正確值
-6. 重新執行測試驗證
+1. 呼叫 visual-qa skill 比對舊站與當前實作，產出 L1/L2/L3 三層差異清單
+2. 依嚴重度排序，修正前 3 項 high/medium 差異
+3. 修改範圍：src/components/**、src/app/**、src/data/**、src/app/**/layout.tsx
+4. 參照 style-reference.json 確認精確數值（禁止猜測）
+5. 下輪再跑 visual-qa 驗證修正並找新差異
 
-測試全部通過時，輸出 <promise>VISUAL QA PASS</promise>
+退出條件：
+- visual-qa 報告無 high 差異、且 medium 差異 ≤ 3 項 → 輸出 <promise>VISUAL QA PASS</promise>
+- 或達到 max-iterations 15
+
+注意事項：
+- 禁止改 CSS font-family（字型安裝問題非程式碼，列 .claude/style-alignment-status.md 待處理）
+- Logo 檔案「外傭專區_LOGO.png」未取得，不必修
+- 幫傭專案頁 /domestic-helper 不在本輪範圍（已完成第三輪精確對齊）
+- loop 期間不要跑 Playwright visual-regression（CSS 變動會造成假 fail），留到 Step 5 再跑
 " --max-iterations 15 --completion-promise "VISUAL QA PASS"
 ```
 
-### Step 5：Ralph Loop 失敗處理
+### Step 5：對齊完成後鎖住 baseline
 
-若達到 max-iterations 15 仍未全過：
+**Ralph Loop 輸出 VISUAL QA PASS 後：**
+1. 跑 `npx playwright test visual-regression --update-snapshots` 產出對齊後的新 baseline
+2. 目視檢查新 baseline 與舊站參考截圖大方向一致
+3. `git add e2e/__screenshots__/ src/ && git commit -m "refactor: 視覺對齊舊站（Ralph Loop 迭代）"`
 
-1. 檢查 `test-results/` 中的 diff 截圖，分類剩餘差異：
-   - **字型差異** — 可能是字型安裝問題，非程式碼問題
-   - **動態內容** — 需加 `mask` 參數遮蔽
-   - **真實 CSS 差異** — 記錄為手動修復項目
-2. 考慮放寬 `maxDiffPixelRatio`（例如 0.2 → 0.25），重跑迴圈
-3. 若特定測試持續失敗，可暫時加 `test.skip()` 並建立追蹤 issue
-4. 產出剩餘差異報告，作為下一輪手動修正的輸入
+**若達到 max-iterations 15 仍未輸出 PASS：**
+1. 將當前 visual-qa 最後一份差異報告儲存為 `.claude/remaining-diffs.md`
+2. 分類剩餘差異：
+   - **字型差異** — 非程式碼問題（字型安裝或 fallback 渲染）
+   - **Logo 缺檔** — 阻塞項目
+   - **真實 CSS 差異** — 手動修復追蹤項
+3. 跑 `--update-snapshots` 鎖住部分進度，建立追蹤 issue 供下次 session 處理
 
 ---
 
