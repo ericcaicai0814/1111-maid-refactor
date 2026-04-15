@@ -8,11 +8,11 @@ describe('DocumentListSection', () => {
     expect(screen.getByText('申請文件')).toBeInTheDocument();
   });
 
-  it('renders all document categories', () => {
+  it('renders flattened document bullet items', () => {
     render(<DocumentListSection />);
-    expect(screen.getByText('基本身分證明')).toBeInTheDocument();
-    expect(screen.getByText('國內求才證明')).toBeInTheDocument();
-    expect(screen.getByText('審查費收據')).toBeInTheDocument();
+    expect(screen.getByText(/雇主身分證影本/)).toBeInTheDocument();
+    expect(screen.getByText(/公立就業服務機構辦理國內招募/)).toBeInTheDocument();
+    expect(screen.getByText(/審查費收據/)).toBeInTheDocument();
   });
 
   it('renders sub-items for special identity docs', () => {

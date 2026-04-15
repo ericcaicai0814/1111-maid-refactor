@@ -20,7 +20,7 @@ describe('ProcessFlowSection', () => {
   it('renders subtitle', () => {
     render(<ProcessFlowSection />);
     expect(
-      screen.getByText(/請依序完成以下六個步驟/),
+      screen.getByText(/依序完成以下六個步驟/),
     ).toBeInTheDocument();
   });
 });

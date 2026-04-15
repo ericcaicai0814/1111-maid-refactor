@@ -14,13 +14,16 @@ export function MiniFAQ() {
   }, []);
 
   return (
-    <section id="faq" className="py-12 md:py-16">
-      <div className="mx-auto max-w-4xl px-4">
-        <h2 className="text-center text-2xl font-bold text-brand-dark md:text-3xl">
-          申請問答
-        </h2>
+    <section id="faq-guide" className="scroll-mt-32">
+      <div className="mx-auto max-w-5xl px-4">
+        {/* 區塊標題 — 淡紫 hero pill */}
+        <div className="mb-7 rounded-2xl bg-[#ecebf7] px-6 py-4 text-center">
+          <h2 className="text-[1.55rem] font-semibold tracking-[-0.02em] text-[#3d378e] md:text-[1.8rem]">
+            申請問答
+          </h2>
+        </div>
 
-        <div className="mt-8 space-y-3">
+        <div className="space-y-3">
           {miniFAQItems.map((item) => (
             <div
               key={item.id}

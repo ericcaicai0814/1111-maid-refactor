@@ -2,14 +2,17 @@ import { applicationSteps } from '@/data/home/process';
 
 export function ProcessFlowSection() {
   return (
-    <section id="process" className="py-12 md:py-16">
+    <section id="process-guide" className="scroll-mt-32">
       <div className="mx-auto max-w-5xl px-4">
-        <h2 className="text-center text-2xl font-bold text-brand-dark md:text-3xl">
-          外籍家庭幫傭申請流程圖
-        </h2>
-        <p className="mt-3 text-center text-text-mid">
-          請依序完成以下六個步驟，確保申請順利進行
-        </p>
+        {/* 區塊標題 — 淡紫 hero pill */}
+        <div className="mb-7 rounded-2xl bg-[#ecebf7] px-6 py-4 text-center">
+          <h2 className="text-[1.55rem] font-semibold tracking-[-0.02em] text-[#3d378e] md:text-[1.8rem]">
+            外籍家庭幫傭申請流程圖
+          </h2>
+          <p className="mt-2 text-sm text-[#6d66a0] md:text-base">
+            依序完成以下六個步驟，申請節奏會更清楚。
+          </p>
+        </div>
 
         {/* Desktop: horizontal zigzag — Mobile: vertical stack */}
         <div className="mt-10 hidden md:block">

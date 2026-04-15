@@ -1,45 +1,42 @@
 import { requiredDocuments } from '@/data/home/documents';
-import { FileText } from 'lucide-react';
 
 export function DocumentListSection() {
-  return (
-    <section id="documents" className="bg-brand-bg py-12 md:py-16">
-      <div className="mx-auto max-w-4xl px-4">
-        <h2 className="text-center text-2xl font-bold text-brand-dark md:text-3xl">
-          申請文件
-        </h2>
+  // 扁平化：每個 document 的 content 或 subItems 都展開成單行 bullet
+  const bulletItems: string[] = [];
+  for (const doc of requiredDocuments) {
+    if (doc.content) {
+      bulletItems.push(doc.content);
+    }
+    if (doc.subItems) {
+      for (const sub of doc.subItems) {
+        bulletItems.push(sub);
+      }
+    }
+  }
 
-        <div className="mt-8 space-y-4">
-          {requiredDocuments.map((doc, index) => (
-            <div
-              key={index}
-              className="rounded-lg bg-white p-5 shadow-sm"
-            >
-              <div className="flex items-start gap-3">
-                <FileText className="mt-0.5 size-5 shrink-0 text-brand" />
-                <div>
-                  <h3 className="font-semibold text-brand-dark">
-                    {doc.category}
-                  </h3>
-                  {doc.content && (
-                    <p className="mt-1 text-sm text-text-mid">{doc.content}</p>
-                  )}
-                  {doc.subItems && (
-                    <ul className="mt-2 space-y-1">
-                      {doc.subItems.map((sub, subIndex) => (
-                        <li
-                          key={subIndex}
-                          className="text-sm text-text-mid before:mr-2 before:content-['•']"
-                        >
-                          {sub}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+  return (
+    <section id="documents-guide" className="scroll-mt-32">
+      <div className="mx-auto max-w-5xl px-4">
+        {/* 區塊標題 — 淡紫 hero pill */}
+        <div className="mb-7 rounded-2xl bg-[#ecebf7] px-6 py-4 text-center">
+          <h2 className="text-[1.55rem] font-semibold tracking-[-0.02em] text-[#3d378e] md:text-[1.8rem]">
+            申請文件
+          </h2>
+        </div>
+
+        {/* 單卡片扁平 bullet 列表 */}
+        <div className="rounded-2xl border border-[#ddd8f2] bg-white p-6 shadow-[0_10px_30px_rgba(61,55,142,0.08)]">
+          <ul className="space-y-4">
+            {bulletItems.map((text, index) => (
+              <li
+                key={index}
+                className="flex gap-3 text-sm leading-7 text-[#5b5778]"
+              >
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#837ccf]" />
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

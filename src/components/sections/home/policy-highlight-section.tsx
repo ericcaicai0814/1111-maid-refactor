@@ -46,78 +46,78 @@ export function PolicyHighlightSection() {
   }, []);
 
   return (
-    <section id="policy" className="py-12 md:py-16">
+    <section id="eligibility-guide" className="scroll-mt-32">
       <div className="mx-auto max-w-5xl px-4">
-        {/* 區塊標題 */}
-        <h2 className="text-center text-2xl font-bold text-brand-dark md:text-3xl">
-          國人家庭幫傭申請資格總整理
-        </h2>
-        <p className="mt-3 text-center text-text-mid">
-          行政院拍板！大幅放寬申請門檻，快來看看您是否符合最新資格。
-        </p>
+        {/* 區塊標題 — 淡紫 hero pill */}
+        <div className="mb-7 rounded-2xl bg-[#ecebf7] px-6 py-4 text-center">
+          <h2 className="text-[1.55rem] font-semibold tracking-[-0.02em] text-[#3d378e] md:text-[1.8rem]">
+            國人家庭幫傭申請資格總整理
+          </h2>
+          <p className="mt-2 text-sm text-[#6d66a0] md:text-base">
+            行政院拍板放寬申請門檻，先確認家庭條件，再依流程完成文件審查。
+          </p>
+        </div>
 
         {/* 水平並排：政策卡片(40%) + 計算機(60%) */}
-        <div className="mt-8 flex flex-col gap-5 md:flex-row md:items-start">
+        <div className="flex flex-col gap-6 lg:flex-row">
 
           {/* 政策卡片 — 金邊 */}
           <div
             id="policy-card"
-            className="w-full rounded-2xl md:w-[40%]"
-            style={{
-              background: '#fffcf8',
-              border: '2px solid #b88746',
-              borderRadius: '16px',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.04)',
-            }}
+            className="w-full rounded-2xl border-2 border-[#b88746] bg-[#fffcf8] p-5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] md:p-8 lg:w-2/5"
           >
-            <div className="p-5">
-              <div className="mb-4 text-center">
-                <span className="inline-block rounded-full bg-brand px-4 py-1.5 text-sm font-semibold text-white">
-                  2026 政府放寬新制
-                </span>
-              </div>
+            <h5 className="mb-3 flex items-center justify-center gap-3 border-b-2 border-[#fef08a] pb-2 font-semibold text-[#b88746]">
+              <svg
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z" />
+              </svg>
+              2026 政府放寬新制
+            </h5>
 
-              <ul className="space-y-4">
-                {newPolicyItems.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    {/* 紅勾 */}
-                    <span className="mt-0.5 shrink-0 text-red-600">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        className="size-5"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                    <div>
-                      <p className="text-sm text-text-dark">{item.text}</p>
-                      <p
-                        className="mt-1 text-sm font-black text-red-600"
-                        style={{
-                          backgroundImage:
-                            'linear-gradient(to bottom, transparent 60%, #fde68a 60%)',
-                          display: 'inline',
-                        }}
-                      >
-                        {item.highlight}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="space-y-3">
+              {newPolicyItems.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  {/* 紅勾 */}
+                  <span className="mt-0.5 shrink-0 text-red-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="size-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <div>
+                    <p className="text-sm text-text-dark">{item.text}</p>
+                    <p
+                      className="mt-1 text-sm font-black text-red-600"
+                      style={{
+                        backgroundImage:
+                          'linear-gradient(to bottom, transparent 60%, #fde68a 60%)',
+                        display: 'inline',
+                      }}
+                    >
+                      {item.highlight}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* 計算機 */}
           <div
             id="calculator"
-            className="w-full md:w-[60%]"
+            className="w-full lg:w-3/5"
             style={{
               border: '1px solid var(--primary)',
               borderRadius: '20px',

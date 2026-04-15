@@ -19,7 +19,7 @@ describe('PolicyHighlightSection', () => {
   it('renders subtitle', () => {
     render(<PolicyHighlightSection />);
     expect(
-      screen.getByText(/大幅放寬申請門檻/),
+      screen.getByText(/放寬申請門檻/),
     ).toBeInTheDocument();
   });
 });
