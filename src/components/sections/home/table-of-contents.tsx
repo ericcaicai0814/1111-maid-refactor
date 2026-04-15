@@ -9,27 +9,27 @@ interface TableOfContentsProps {
 
 export function TableOfContents({ items }: TableOfContentsProps) {
   return (
-    <nav
-      className="sticky top-20 hidden max-h-[calc(100vh-6rem)] lg:block"
-      aria-label="目錄"
+    <aside
+      className="sticky top-28 hidden overflow-hidden rounded-2xl border border-[#eae8fa] bg-white shadow-[0_8px_24px_rgba(61,55,142,0.08)] lg:block"
+      aria-label="快速連結"
     >
-      <div className="rounded-lg border bg-white p-4 shadow-sm">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-text-light">
-          快速導覽
-        </p>
-        <ul className="space-y-2">
+      <div className="bg-[#ecebf7] px-5 py-3">
+        <h2 className="text-lg font-semibold text-[#3d378e]">快速連結</h2>
+      </div>
+      <nav className="px-5 py-4">
+        <ul className="space-y-3 text-base text-[#4f4b71]">
           {items.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} className="ml-4 list-disc">
               <a
                 href={`#${item.id}`}
-                className="block text-sm text-text-mid transition-colors hover:text-brand"
+                className="underline underline-offset-4 transition-colors hover:text-[#837ccf]"
               >
                 {item.label}
               </a>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </aside>
   );
 }

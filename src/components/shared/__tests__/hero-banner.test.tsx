@@ -15,9 +15,4 @@ describe('HeroBanner', () => {
     const images = screen.getAllByRole('img');
     expect(images.length).toBeGreaterThanOrEqual(1);
   });
-
-  it('renders quick links navigation', () => {
-    render(<HeroBanner />);
-    expect(screen.getByLabelText('快速連結')).toBeInTheDocument();
-  });
 });

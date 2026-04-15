@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { ChevronRight } from 'lucide-react';
 import { faqItems } from '@/data/faq';
 import type { FAQItem } from '@/data/types';
 
@@ -15,19 +14,28 @@ function AccordionItem({
   onToggle: (id: number) => void;
 }) {
   return (
-    <div className="rounded-lg border bg-white shadow-sm">
+    <div className="overflow-hidden rounded-2xl border border-[#ddd8ee] bg-white shadow-[0_4px_20px_rgba(131,124,207,0.18)]">
       <button
         type="button"
         onClick={() => onToggle(item.id)}
-        className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left"
+        className="flex w-full items-start justify-between gap-4 px-6 py-6 text-left md:px-9 md:py-7"
         aria-expanded={isOpen}
       >
-        <h6 className="font-medium text-text-dark">{item.question}</h6>
-        <ChevronRight
-          className={`size-5 shrink-0 text-text-light transition-transform ${
+        <span className="pr-2 text-[22px] font-medium leading-[1.35] tracking-[-0.02em] text-[#3d378e]">
+          {item.question}
+        </span>
+        <svg
+          className={`mt-1 h-6 w-6 shrink-0 text-[#4d46aa] transition-transform duration-300 ${
             isOpen ? 'rotate-90' : ''
           }`}
-        />
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2.5}
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="m9 6 6 6-6 6" />
+        </svg>
       </button>
       <div
         className={`grid transition-all duration-200 ease-in-out ${
@@ -35,7 +43,7 @@ function AccordionItem({
         }`}
       >
         <div className="overflow-hidden">
-          <div className="border-t px-5 py-4 text-sm text-text-mid">
+          <div className="border-t border-[#eae8fa] px-6 py-5 text-base leading-relaxed text-[#4f4b71] md:px-9 md:py-6">
             {item.answer}
           </div>
         </div>
@@ -59,28 +67,42 @@ export function FAQAccordionSection() {
     });
   }, []);
 
-  return (
-    <section className="bg-white py-12 md:py-16">
-      <div className="mx-auto max-w-[1100px] px-4">
-        {/* 標題區 */}
-        <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-brand-dark md:text-3xl">
-            申請問答
-          </h1>
-        </div>
+  const half = Math.ceil(faqItems.length / 2);
+  const leftItems = faqItems.slice(0, half);
+  const rightItems = faqItems.slice(half);
 
-        {/* FAQ 單欄列表 */}
-        <div className="flex flex-col gap-4">
-          {faqItems.map((item) => (
-            <AccordionItem
-              key={item.id}
-              item={item}
-              isOpen={openIds.has(item.id)}
-              onToggle={toggle}
-            />
-          ))}
+  return (
+    <div className="bg-[#f5f4ff]">
+      <section id="faq" className="py-16 md:py-20">
+        <div className="mx-auto max-w-[1240px] px-5">
+          <h2 className="mb-10 text-center text-[28px] font-semibold tracking-[-0.03em] text-[#3d378e] md:mb-12 md:text-[36px]">
+            申請問答
+          </h2>
+
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+            <div className="space-y-6">
+              {leftItems.map((item) => (
+                <AccordionItem
+                  key={item.id}
+                  item={item}
+                  isOpen={openIds.has(item.id)}
+                  onToggle={toggle}
+                />
+              ))}
+            </div>
+            <div className="space-y-6">
+              {rightItems.map((item) => (
+                <AccordionItem
+                  key={item.id}
+                  item={item}
+                  isOpen={openIds.has(item.id)}
+                  onToggle={toggle}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
