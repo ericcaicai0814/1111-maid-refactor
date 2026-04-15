@@ -3,29 +3,28 @@
     "tag": "nav",
     "count": 1,
     "classes": [
-      "bg-brand-dark hidden sm:block"
+      "bg-[#3d378e] hidden sm:block"
     ]
   },
   {
     "tag": "main",
-    "count": 2,
+    "count": 1,
     "classes": [
-      "pt-14 sm:pt-[112px]",
-      "container max-w-4xl mx-auto px-4 py-8"
+      "pt-16 sm:pt-[116px]"
     ]
   },
   {
     "tag": "footer",
     "count": 1,
     "classes": [
-      "bg-brand-dark px-5 py-5 text-center"
+      "bg-[#3d378e] text-gray-300"
     ]
   },
   {
     "tag": "section",
     "count": 2,
     "classes": [
-      "md:py-16 py-12",
+      "scroll-mt-32",
       "mt-5"
     ]
   },
@@ -39,7 +38,7 @@
     "count": 2,
     "classes": [
       "border-b font-semibold pb-2 text-lg",
-      "font-bold md:text-3xl text-2xl text-brand-dark text-center"
+      "font-semibold md:text-[1.8rem] text-[#3d378e] text-[1.55rem] tracking-[-0.02em]"
     ]
   }
 ]

@@ -1,37 +1,35 @@
 [
   {
     "tag": "nav",
-    "count": 3,
+    "count": 2,
     "classes": [
-      "bg-brand-dark hidden sm:block",
-      "border border-[#eae8fa] mt-6 overflow-hidden rounded-xl",
-      "hidden lg:block max-h-[calc(100vh-6rem)] sticky top-20"
+      "bg-[#3d378e] hidden sm:block",
+      "px-5 py-4"
     ]
   },
   {
     "tag": "main",
     "count": 1,
     "classes": [
-      "pt-14 sm:pt-[112px]"
+      "pt-16 sm:pt-[116px]"
     ]
   },
   {
     "tag": "footer",
     "count": 1,
     "classes": [
-      "bg-brand-dark px-5 py-5 text-center"
+      "bg-[#3d378e] text-gray-300"
     ]
   },
   {
     "tag": "section",
-    "count": 7,
+    "count": 6,
     "classes": [
-      "bg-white",
-      "md:py-16 py-12",
-      "bg-white md:py-16 py-12",
-      "md:py-16 py-12",
-      "bg-brand-bg md:py-16 py-12",
-      "md:py-16 py-12",
+      "scroll-mt-32",
+      "scroll-mt-32",
+      "scroll-mt-32",
+      "scroll-mt-32",
+      "scroll-mt-32",
       "mt-5"
     ]
   },
@@ -39,18 +37,19 @@
     "tag": "h1",
     "count": 1,
     "classes": [
-      "font-bold leading-tight lg:text-4xl md:text-3xl text-2xl text-brand-dark"
+      "font-extrabold md:text-[2.35rem] text-[#3d378e] text-[2rem] text-center tracking-[-0.03em]"
     ]
   },
   {
     "tag": "h2",
-    "count": 5,
+    "count": 6,
     "classes": [
-      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
-      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
-      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
-      "font-bold md:text-3xl text-2xl text-brand-dark text-center",
-      "font-bold md:text-3xl text-2xl text-brand-dark text-center"
+      "font-semibold text-[#3d378e] text-lg",
+      "font-semibold md:text-[1.8rem] text-[#3d378e] text-[1.55rem] tracking-[-0.02em]",
+      "font-semibold md:text-[1.8rem] text-[#3d378e] text-[1.55rem] tracking-[-0.02em]",
+      "font-semibold md:text-[1.8rem] text-[#3d378e] text-[1.55rem] tracking-[-0.02em]",
+      "font-semibold md:text-[1.8rem] text-[#3d378e] text-[1.55rem] tracking-[-0.02em]",
+      "font-semibold md:text-[1.8rem] text-[#3d378e] text-[1.55rem] tracking-[-0.02em]"
     ]
   }
 ]

@@ -47,8 +47,8 @@ for (const { name, path } of pages) {
 test.describe('申請資格 — 互動', () => {
   test('MiniFAQ 展開', async ({ page }) => {
     await page.goto('./');
-    await page.locator('#faq button').first().click();
-    await expect(page.locator('#faq')).toHaveScreenshot(
+    await page.locator('#faq-guide button').first().click();
+    await expect(page.locator('#faq-guide')).toHaveScreenshot(
       '申請資格-faq-expanded.png',
     );
   });
@@ -120,8 +120,8 @@ test.describe('報名表單 — 互動', () => {
   test('MiniFAQ 展開（表單頁）', async ({ page }) => {
     await page.goto('./foreign-domestic-form');
     await page.waitForLoadState('networkidle');
-    await page.locator('#faq button').first().click();
-    await expect(page.locator('#faq')).toHaveScreenshot(
+    await page.locator('#faq-guide button').first().click();
+    await expect(page.locator('#faq-guide')).toHaveScreenshot(
       'form-faq-expanded.png',
     );
   });

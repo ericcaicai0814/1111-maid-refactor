@@ -3,41 +3,41 @@
     "tag": "nav",
     "count": 1,
     "classes": [
-      "bg-brand-dark hidden sm:block"
+      "bg-[#3d378e] hidden sm:block"
     ]
   },
   {
     "tag": "main",
     "count": 1,
     "classes": [
-      "pt-14 sm:pt-[112px]"
+      "pt-16 sm:pt-[116px]"
     ]
   },
   {
     "tag": "footer",
     "count": 1,
     "classes": [
-      "bg-brand-dark px-5 py-5 text-center"
+      "bg-[#3d378e] text-gray-300"
     ]
   },
   {
     "tag": "section",
     "count": 2,
     "classes": [
-      "bg-white md:py-16 py-12",
+      "md:py-20 py-16",
       "mt-5"
     ]
   },
   {
     "tag": "h1",
-    "count": 1,
-    "classes": [
-      "font-bold md:text-3xl text-2xl text-brand-dark"
-    ]
+    "count": 0,
+    "classes": []
   },
   {
     "tag": "h2",
-    "count": 0,
-    "classes": []
+    "count": 1,
+    "classes": [
+      "font-semibold mb-10 md:mb-12 md:text-[36px] text-[#3d378e] text-[28px] text-center tracking-[-0.03em]"
+    ]
   }
 ]
