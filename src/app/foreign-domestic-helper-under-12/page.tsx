@@ -17,10 +17,12 @@ const tocItems = [
 
 export default function HomePage() {
   return (
-    <>
-      <HeroBanner />
-      <div className="relative mx-auto max-w-7xl px-4 lg:flex lg:gap-8 lg:px-0">
-        <div className="min-w-0 flex-1 py-12">
+    <div className="bg-white">
+      <div className="mx-auto max-w-[1100px] px-4 pb-16 pt-10 md:pt-12">
+        <HeroBanner />
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-[260px_minmax(0,1fr)]">
+          <TableOfContents items={tocItems} />
           <div className="space-y-12">
             <PolicyHighlightSection />
             <CostTableSection />
@@ -29,10 +31,7 @@ export default function HomePage() {
             <MiniFAQ />
           </div>
         </div>
-        <div className="hidden w-56 shrink-0 py-12 pr-4 lg:block">
-          <TableOfContents items={tocItems} />
-        </div>
       </div>
-    </>
+    </div>
   );
 }
