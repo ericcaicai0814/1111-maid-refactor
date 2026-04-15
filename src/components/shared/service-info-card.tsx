@@ -26,9 +26,9 @@ export function ServiceInfoCard() {
         <div className="flex gap-10">
         {/* 服務時間 */}
         <div className="flex-1">
-          <h3 className="mb-4 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
+          <h4 className="mb-4 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
             服務時間
-          </h3>
+          </h4>
           <ul className="divide-y divide-gray-200">
             {serviceHours.map((item) => (
               <li key={item.label} className="flex items-center justify-between py-3">
@@ -43,9 +43,9 @@ export function ServiceInfoCard() {
 
         {/* 服務電話 */}
         <div className="flex-1">
-          <h3 className="mb-4 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
+          <h4 className="mb-4 border-l-4 border-brand pl-3 text-[19.5px] font-bold text-brand-dark">
             服務電話
-          </h3>
+          </h4>
           <ul className="divide-y divide-gray-200">
             {servicePhones.map((item) => (
               <li key={item.region} className="flex items-center justify-between py-3">

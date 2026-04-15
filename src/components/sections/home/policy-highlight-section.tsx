@@ -126,9 +126,9 @@ export function PolicyHighlightSection() {
               padding: '24px',
             }}
           >
-            <h3 className="text-center text-xl font-bold text-brand-dark">
+            <h5 className="text-center text-xl font-bold text-brand-dark">
               資格與點數試算
-            </h3>
+            </h5>
 
             {/* 小朋友相關項目 */}
             <p className="mb-3 mt-5 font-semibold text-brand-dark">
