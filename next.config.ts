@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/foreign-domestic-helper-under-12/foreign-domestic-form',
-        destination: '/foreign-domestic-helper-under-12/form',
+        source: '/foreign-domestic-helper-under-12/form',
+        destination: '/foreign-domestic-helper-under-12/foreign-domestic-form',
         permanent: true,
       },
     ];

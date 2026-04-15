@@ -15,10 +15,10 @@ test.describe('幫傭專案頁面 (Domestic Helper)', () => {
   });
 
   test('CTA 按鈕連結至表單頁', async ({ page }) => {
-    const formLink = page.locator('a[href*="/form"]').first();
+    const formLink = page.locator('a[href*="/foreign-domestic-form"]').first();
     await expect(formLink).toBeVisible();
     await formLink.click();
-    await expect(page).toHaveURL(/\/form/);
+    await expect(page).toHaveURL(/\/foreign-domestic-form/);
   });
 
   test('頁面包含主要 section', async ({ page }) => {

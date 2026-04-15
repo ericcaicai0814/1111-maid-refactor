@@ -4,5 +4,5 @@ export const publicPaths = {
   home: PUBLIC_BASE,
   domesticHelper: `${PUBLIC_BASE}/domestic-helper`,
   faq: `${PUBLIC_BASE}/faq`,
-  form: `${PUBLIC_BASE}/form`,
+  form: `${PUBLIC_BASE}/foreign-domestic-form`,
 } as const;

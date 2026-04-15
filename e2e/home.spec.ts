@@ -28,7 +28,7 @@ test.describe('首頁 (Home Page)', () => {
 
   test('Hero Banner 圖片連結點擊跳轉至表單', async ({ page }) => {
     await homePage.clickHeroBanner();
-    await expect(page).toHaveURL(/\/form/);
+    await expect(page).toHaveURL(/\/foreign-domestic-form/);
   });
 
   test('FAQ 區塊顯示並可展開', async () => {

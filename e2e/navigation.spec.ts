@@ -3,7 +3,7 @@ import { HeaderPage } from './pages/header.page';
 
 test.describe('Navigation', () => {
   test('Logo 點擊返回首頁', async ({ page }) => {
-    await page.goto('./form');
+    await page.goto('./foreign-domestic-form');
     const header = new HeaderPage(page);
     await header.logo.click();
     await expect(page).toHaveURL(/foreign-domestic-helper-under-12\/?$/);
@@ -20,7 +20,7 @@ test.describe('Navigation', () => {
     await page.goto('./');
     const header = new HeaderPage(page);
     await header.clickNavLink('報名表單');
-    await expect(page).toHaveURL(/\/form/);
+    await expect(page).toHaveURL(/\/foreign-domestic-form/);
   });
 
   test('桌面導覽列 - 常見問題連結', async ({ page }) => {

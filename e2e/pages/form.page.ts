@@ -30,7 +30,7 @@ export class FormPage {
   }
 
   async goto() {
-    await this.page.goto('./form');
+    await this.page.goto('./foreign-domestic-form');
   }
 
   async isLoaded() {
