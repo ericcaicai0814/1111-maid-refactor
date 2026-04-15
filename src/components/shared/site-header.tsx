@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="fixed top-0 right-0 left-0 z-[99]">
       {/* Row 1: Logo bar */}
       <div className="bg-white">
-        <div className="mx-auto flex h-14 max-w-[1100px] items-center px-4 md:px-10">
+        <div className="mx-auto flex max-w-[1100px] items-center justify-between px-5 py-3">
           <Link href={publicPaths.home} className="shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -28,14 +28,14 @@ export function SiteHeader() {
       </div>
 
       {/* Row 2: Nav bar (desktop) */}
-      <nav className="hidden bg-brand-dark sm:block">
-        <div className="mx-auto flex h-[52px] max-w-[1100px] items-center gap-5 px-4 md:px-5">
+      <nav className="hidden bg-[#3d378e] sm:block">
+        <div className="mx-auto flex max-w-[1100px] items-center gap-1 px-5">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               aria-current={pathname === item.href ? 'page' : undefined}
-              className="text-xl font-bold text-white transition-colors hover:text-brand-accent aria-[current=page]:text-brand-accent"
+              className="border-b-[3px] border-transparent px-5 py-3 text-xl font-bold text-white transition-all duration-200 hover:underline hover:opacity-80 aria-[current=page]:border-[#f5c842] aria-[current=page]:bg-white/10"
             >
               {item.label}
             </Link>
